@@ -1,0 +1,59 @@
+﻿@*
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Basic Vertical form layout section start -->
+<section id="basic-vertical-layouts">
+    <div class="row match-height">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Create</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                    <form class="form form-vertical" asp-action="Create" asp-controller="" enctype="multipart/form-data">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                        <label for="first-name-vertical">Facebook Link</label>
+                                        <input type="text" id="first-name-vertical" class="form-control" asp-for="" placeholder="Facebook Link">
+                                        </div>
+                                    </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <fieldset class="form-group">
+                                        <label for="basicInputFile">Member Photo</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" asp-for="Photo" id="inputGroupFile01">
+                                            <label class="custom-file-label">Choose file</label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                  
+                               
+                                    <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-vertical">Description</label>
+                                           <fieldset class="form-group">
+                                                     <textarea class="form-control" id="basicTextarea" rows="3" placeholder="Description" asp-for="AboutDescription"></textarea>
+                                           </fieldset>
+                                    </div>
+                                </div>
+                                  
+                           
+                                   
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Submit</button>
+                                        <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+</section>
+<!-- // Basic Vertical form layout section end -->
+*@

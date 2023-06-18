@@ -1,0 +1,63 @@
+﻿@model IEnumerable<OffersVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1>Index Of Offers</h1>
+</center>
+
+
+<section id="basic-datatable">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">All Offers</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        @*                        <p class="card-text">DataTables has most features enabled by default, so all you need to do to use it with your own ables is to call the construction function: $().DataTable();.</p>
+                        *@                        <div class="table-responsive">
+                            <table class="table zero-configuration">
+                                <thead>
+                                    <tr>
+                                        <th>Discount</th>
+                                        <th>Description</th>
+                                        <th>CarId</th>
+                                        <th>Details</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model) {
+                                        <tr>
+                                            <td>@item.Discount</td>
+                                            <td>@item.Description</td>
+                                            <td>@item.CarId</td>
+                                            <td><a asp-controller="Offers" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a></td>
+                                            <td><a asp-controller="Offers" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Update</a></td>
+                                            <td><a asp-controller="Offers" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></td>
+                                        </tr>
+                                    }
+                                <tfoot>
+                                    <tr>
+                                        <th>Discount</th>
+                                        <th>Description</th>
+                                        <th>CarId</th>
+                                        <th>Details</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

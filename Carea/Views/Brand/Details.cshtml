@@ -1,0 +1,37 @@
+﻿@model BrandVM
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+    <h1>Details Of Brand</h1>
+</Center>
+
+<form asp-action="Details" asp-controller="Brand" enctype="multipart/form-data">
+	<center>
+		<img src="~/Uploads/Brand/@Model.LogoUrl" class="mb-3" width="300" height="200" />
+
+	</center>
+	<br />
+						<div class="form-group">
+							<label for="Name">Brand Name</label>
+							<input class="form-control" type="text"  asp-for="BrandName"readonly>
+							<br />
+
+						</div>
+						<div class="form-group">
+		<label for="Name">Phone</label>
+		<input class="form-control" type="text" asp-for="Phone" readonly>
+							<br />
+
+						</div>
+
+	<div class="col-12">
+		<a asp-controller="Brand" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
+		<button asp-controller="Brand" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger"><i class="feather icon-trash-2"></i> Delete</button>
+	</div>
+
+				
+</form>

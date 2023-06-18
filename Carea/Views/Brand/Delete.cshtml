@@ -1,0 +1,37 @@
+﻿@model BrandVM
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+    <h1>Delete Brand</h1>
+</Center>
+
+<form asp-action="Delete" asp-controller="Brand" enctype="multipart/form-data">
+	<center>
+		<img src="~/Uploads/Brand/@Model.LogoUrl" class="mb-3" width="300" height="200" />
+
+	</center>
+	<br />
+						<div class="form-group">
+							<label for="Name">Brand Name</label>
+							<input class="form-control" type="text"  asp-for="BrandName"readonly>
+							<br />
+
+						</div>
+						<div class="form-group">
+		<label for="Name">Phone</label>
+		<input class="form-control" type="text" asp-for="Phone" readonly>
+							<br />
+
+						</div>
+
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<a asp-action="Index" asp-controller="Brand" class="btn btn-danger btn-lg">Cancel</a>
+	</div>
+
+				
+</form>

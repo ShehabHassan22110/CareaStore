@@ -1,0 +1,81 @@
+﻿@model CreateOrderVM
+@inject Carea.BLL.Interface.ICarsRep carsrep
+@{
+	ViewData["Title"] = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center class="mb-2">
+	<h1>Order Details</h1>
+</center>
+<div class="pd-20 card-box mb-30">
+
+	<div class="wizard-content">
+		<form class="tab-wizard wizard-circle wizard">
+
+			<section>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label asp-for="ApplicationUserId">  </label>
+							<input type="text" class="form-control" asp-for="ApplicationUserId" readonly>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label asp-for="CarsId">  </label>
+							<input type="text" class="form-control" asp-for="CarsId" readonly>
+						</div>
+					</div>
+				</div>
+				@*<div class="col-md-12">
+					<div class="form-group">
+						<label asp-for="Status">  </label>
+						<input type="text" class="form-control" asp-for="Status" readonly>
+					</div>
+				</div>*@
+
+			</section>
+			<section>
+				<table class=" table nowrap">
+					<thead>
+						<tr>
+							<th> # </th>
+							<th>Car Name</th>
+							<th>Car Description </th>
+							<th>Car Price</th>
+							<th>Brand</th>
+
+
+
+						</tr>
+					</thead>
+					<tbody>
+						@foreach (var item in carsrep.Get()) {
+							<tr>
+								<td></td>
+								<td>@item.Car_Name</td>
+								<td>@item.Car_Desc</td>
+								<td>@item.Car_Price</td>
+								<td>@item.Brand</td>
+
+
+
+
+							</tr>
+						}
+
+
+					</tbody>
+				</table>
+
+			</section>
+
+
+			<div class="col-12">
+				<a asp-controller="SavedOrders" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Delete</a>
+			</div>
+		</form>
+	</div>
+</div>

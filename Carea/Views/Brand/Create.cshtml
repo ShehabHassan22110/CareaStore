@@ -1,0 +1,34 @@
+﻿@model BrandVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+	<h1>Create New Brand</h1>
+</Center>
+
+<form asp-action="Create" asp-controller="Brand" enctype="multipart/form-data">
+						<div class="form-group">
+							<label for="Name">Brand Name</label>
+							<input class="form-control" type="text" placeholder="Add Brand Name Here .. " asp-for="BrandName">
+							<br />
+
+						</div>
+						<div class="form-group">
+		<label for="Name">Phone</label>
+		<input class="form-control" type="text" placeholder="Add Phone Here .. " asp-for="Phone">
+							<br />
+
+						</div>
+	<div class="form-group">
+		<label for="Photo">Choose Photo</label>
+		<input type="file" class="form-control-file form-control height-auto" asp-for="Photo">
+	</div>
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+	</div>
+
+				
+</form>

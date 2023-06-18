@@ -1,0 +1,70 @@
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Eibtek\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+D:\Work Folder\Projects\Mtao\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+D:\Work Folder\Projects\Mtao\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Mtao\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Mtao\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+D:\Work Folder\Projects\Pharmacy\Project\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+F:\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+F:\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+F:\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+F:\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+D:\Carea Project\Last Project\Carea unive\UniProject\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+D:\Carea Project\Git hub Repo\Carea-Universte-Project-\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+F:\Carea Final\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+F:\Carea Final\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+F:\Carea Final\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+F:\Carea Final\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb

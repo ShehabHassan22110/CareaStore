@@ -1,0 +1,29 @@
+﻿@model Car_Photo_ColorVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+				<Center>
+					<h1>Create New Photo For Car</h1>
+				</Center>
+
+			<form asp-action="Create" asp-controller="PhotoColor" enctype="multipart/form-data">
+				
+		<div class="form-group">
+										<label for="Name">Color Code</label>
+										<input class="form-control" type="text" placeholder="Add Color Code " asp-for="Color_Code">
+										<br />
+
+									</div>	
+							<div class="form-group">
+								<label for="Photo">Choose Photo</label>
+								<input type="file" class="form-control-file form-control height-auto" asp-for="Photo">
+							</div>
+							<div class="col-12">
+								<button type="submit" class="btn btn-lg btn-primary">Save</button>
+								<button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+							</div>
+
+				
+			</form>

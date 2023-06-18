@@ -1,0 +1,36 @@
+﻿@model Car_Photo_ColorVM
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+<form asp-action="Edit" asp-controller="PhotoColor" enctype="multipart/form-data">
+	<input  type="hidden" asp-for="@Model.Id"/>
+	<input  type="hidden" asp-for="@Model.imgUrl"/>
+	<input  type="hidden" asp-for="@Model.Car_Id"/>
+	<center>
+		<img src="~/Uploads/Cars/@Model.imgUrl" class="mb-3" width="300" height="200" />
+
+	</center>
+	<br />
+	<div class="form-group">
+		<label for="Name">Color Code</label>
+		<input class="form-control" type="text" asp-for="Color_Code" >
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Photo">Choose Photo</label>
+		<input type="file" class="form-control-file form-control height-auto" asp-for="Photo">
+	</div>
+
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<a asp-action="Index" asp-controller="PhotoColor" class="btn btn-danger btn-lg">Cancel</a>
+	</div>
+
+
+</form>
+

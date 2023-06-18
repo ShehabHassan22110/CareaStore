@@ -1,0 +1,46 @@
+﻿@model OffersVM
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+	<h1>Create New Offer</h1>
+</Center>
+<form asp-action="Create" asp-controller="Offers" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="Name">Offer Discount</label>
+		<input class="form-control" type="text" placeholder="Add Offer Discount Here .. " asp-for="Discount">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Offer Description</label>
+		<input class="form-control" type="text" placeholder="Add Offer Description .. " asp-for="Description">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Car Id</label>
+		<input class="form-control" type="text" placeholder="Add CarId  .. " asp-for="CarId">
+		<br />
+
+	</div><div class="form-group">
+		<label for="Name">Title</label>
+		<input class="form-control" type="text" placeholder="Title .. " asp-for="Title">
+		<br />
+
+	</div>
+	@*<div class="form-group">
+		<label for="Photo">Choose Photo</label>
+		<input type="file" class="form-control-file form-control height-auto" asp-for="Cars.Car_Photo_Color">
+	</div>*@
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+	</div>
+
+
+</form>

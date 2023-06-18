@@ -1,0 +1,32 @@
+﻿@model Car_Photo_ColorVM
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+
+
+<form asp-action="Delete" asp-controller="PhotoColor" enctype="multipart/form-data">
+	<center>
+		<img src="~/Uploads/Cars/" class="mb-3" width="300" height="200" />
+
+	</center>
+	<br />
+	<div class="form-group">
+		<label for="Name">Color Code</label>
+		<input class="form-control" type="text" asp-for="Color_Code" readonly>
+		<br />
+
+	</div>
+
+
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<a asp-action="Index" asp-controller="PhotoColor" class="btn btn-danger btn-lg">Cancel</a>
+	</div>
+
+
+</form>

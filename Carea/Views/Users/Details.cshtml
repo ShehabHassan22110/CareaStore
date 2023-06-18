@@ -1,0 +1,76 @@
+﻿@model ApplicationUser
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1>User Details</h1>
+</center>
+
+
+
+
+
+                <section class="page-users-view">
+    <div class="row">
+        <!-- account start -->
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Account</div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="users-view-image">
+                            <img src="../../../app-assets/images/portrait/small/avatar-s-12.jpg" class="users-avatar-shadow w-100 rounded mb-2 pr-2 ml-1" alt="avatar">
+                        </div>
+                        <div class="col-12 col-sm-9 col-md-6 col-lg-5">
+                            <table>
+                                <tr>
+                                    <td class="font-weight-bold">FullName</td>
+                                    <td>@Model.FullName</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Nickname</td>
+                                    <td>@Model.Nickname</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Email</td>
+                                    <td>@Model.Email</td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                    <td class="font-weight-bold">Birth Date</td>
+                                    <td>@Model.BirthDate</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Phone Number</td>
+                                    <td>@Model.PhoneNumber</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">Gender</td>
+                                    <td>@Model.Gender</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold">PIN</td>
+                                    <td>@Model.PIN</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        
+                        <div class="col-12">
+                            <a asp-controller="Users" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
+                            <button asp-controller="Users" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger"><i class="feather icon-trash-2"></i> Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- account end -->
+       
+    
+    </div>
+</section>

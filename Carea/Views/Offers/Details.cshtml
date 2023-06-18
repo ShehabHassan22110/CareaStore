@@ -1,0 +1,54 @@
+﻿@model OffersVM
+
+@{
+	ViewData["Title"] = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+	<h1>Details Of Offer</h1>
+</Center>
+
+<form asp-action="Details" asp-controller="Offers" enctype="multipart/form-data">
+
+	<br />
+	<div class="form-group">
+		<label for="Name">Discount</label>
+		<input class="form-control" type="text" asp-for="Discount" readonly>
+	</div>
+	<br />
+
+	<div class="form-group">
+		<label for="Name">Description</label>
+		<input class="form-control" type="text" asp-for="Description" readonly>
+
+	</div>
+	<br />
+	<div class="form-group">
+		<label for="Name">Title</label>
+		<input class="form-control" type="text" asp-for="Title" readonly>
+
+	</div>
+	<br />
+	
+		<br />
+		<div class="form-group">
+			<label for="Name">Car Name</label>
+			<input class="form-control" type="text" asp-for="Cars.Car_Name" readonly>
+	</div>
+			<br />
+			<div class="form-group">
+				<label for="Name">Car Price</label>
+				<input class="form-control" type="text" asp-for="Cars.Car_Price" readonly>
+				<br />
+	</div>
+
+
+
+	<div class="col-12">
+		<a asp-controller="Offers" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary mr-1"><i class="feather icon-edit-1"></i> Edit</a>
+		<button asp-controller="Offers" asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-outline-danger"><i class="feather icon-trash-2"></i> Delete</button>
+	</div>
+
+
+</form>

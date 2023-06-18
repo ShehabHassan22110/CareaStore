@@ -1,0 +1,43 @@
+﻿@*
+
+
+@model CrewVM;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="basic-examples">
+    <div class="row match-height">
+        <form asp-controller="Crew" asp-action="Delete" class="form-group ">
+            <input type="hidden" asp-for="@Model.Id" disabled class="form-control" />
+            <input type="hidden" asp-for="@Model.MemberImgUrl" disabled class="form-control" />
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-content">
+                        <img class="card-img-top img-fluid" src="~/Uploads/Crew/@Model.MemberImgUrl" alt="Card image cap">
+                        <div class="card-body">
+                            <h5>@Model.MemberName</h5>
+                            <p class="card-text  mb-0"> </p>
+                            <span class="card-text">@Model.MemberPosition</span>
+                            <div class="card-btns d-flex justify-content-between mt-2">
+                                <a asp-action="Edite" asp-controller="Crew" class="btn gradient-light-primary text-white">Edite</a>
+                                <input type="submit" value="Delete" class="btn btn-danger" />
+                                <a asp-action="Index" asp-controller="Crew" class="btn btn-outline-primary">Back</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <center>
+                </center>
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>*@

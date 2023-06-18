@@ -1,0 +1,60 @@
+﻿@model OrderRequestVM
+
+@{
+	ViewData["Title"] = "Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+	<h1>Edit OrderRequest</h1>
+</Center>
+
+<form asp-action="Reject" asp-controller="OrderRequest" enctype="multipart/form-data">
+
+	<br />
+	<div class="form-group">
+		<label for="Name">Offerd Price</label>
+		<input class="form-control" type="text" asp-for="OfferdPrice" readonly>
+	</div>
+	<br />
+
+	<div class="form-group">
+		<h2 for="Name">Statues</h2>
+		<br />
+		@if (Model.Statues == 0)
+		{
+			<label for="Name">Pending</label>
+
+		}
+		else if (Model.Statues == 1)
+		{
+			<label for="Name">Accepted</label>
+
+		}
+		else if (Model.Statues == 2)
+		{
+			<label for="Name">Rejected</label>
+
+		}
+	</div>
+	<br />
+	<br />
+	<div class="form-group">
+		<label for="Name">Car Name</label>
+		<input class="form-control" type="text" asp-for="Cars.Car_Name" readonly>
+	</div>
+	<br />
+	<div class="form-group">
+		<label for="Name">Car Model</label>
+		<input class="form-control" type="text" asp-for="Cars.Car_Model" readonly>
+		<br />
+	</div>
+
+
+	<div class="col-12">
+		<input type="submit" value="Reject Request " class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1" />
+		<a asp-action="Delete" asp-controller="OrderRequest" class="btn btn-danger btn-lg">Delete</a>
+	</div>
+
+
+</form>

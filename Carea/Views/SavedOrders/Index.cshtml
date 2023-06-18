@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CreateOrderVM>;
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1 class="mb-2">
+        All Orders
+    </h1>
+</center>
+
+<div class="pd-20 card-box mb-30">
+    <div class="clearfix mb-20">
+        <div class="pull-left">
+            <h4 class="text-blue h4 text-bold"> All Orders </h4>
+        </div>
+        <div class="pull-right">
+            @*            <a asp-action="Create" asp-controller="SubCategory" class="btn btn-primary btn-lg">
+            <i class="icon-copy fi-plus"></i> أضف قسم فرعي
+
+            </a>*@
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="checkbox-datatable table nowrap">
+            <thead>
+                <tr>
+                    <th> # </th>
+                    <th>User Id</th>
+                    <th>Car Id</th>
+                    <th>Order Status</th>
+                    <th> Delete</th>
+                    <th>Details</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td></td>
+                        <td>@item.ApplicationUserId</td>
+                        <td>@item.CarsId</td>
+                        <td class="product-action">
+                            <a asp-action="Delete" asp-controller="SavedOrders" asp-route-id="@item.Id">
+                                <span class="action-delete"><i class="btn btn-danger">Delete</i></span>
+                            </a>
+                        </td>
+                        <td class="product-action">
+                            <a asp-action="Details" asp-controller="SavedOrders" asp-route-id="@item.Id">
+                                <span class="action-edit"><i class="btn btn-warning">Edit</i></span>
+                            </a>
+
+                        </td>
+                        <td class="product-action">
+                            <a asp-action="Edit" asp-controller="SavedOrders" asp-route-id="@item.Id">
+                                <span class="action-delete"><i class="btn btn-danger">Edit Order Status</i></span>
+                            </a>
+                        </td>
+
+
+                    </tr>
+                }
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

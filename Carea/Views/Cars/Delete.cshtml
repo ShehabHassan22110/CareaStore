@@ -1,0 +1,137 @@
+﻿@model CarsVM
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<Center>
+    <h1>Delete @Model.Car_Name</h1>
+</Center>
+
+
+<form asp-action="Delete" asp-controller="Cars" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="Name">Car Name</label>
+		<input class="form-control" type="text" placeholder="Add Car Name Here .. " asp-for="Car_Name">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Car Model</label>
+		<input class="form-control" type="text" placeholder="Add Car Model Here .. " asp-for="Car_Model">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Car Description</label>
+		<input class="form-control" type="text" placeholder="Add Description Here .. " asp-for="Car_Desc">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Car Price</label>
+		<input class="form-control" type="text" placeholder="Add Price Here .. " asp-for="Car_Price">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Car Rate</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Rate">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Leather_Interior</label>
+		<input class="form-control" type="checkbox" placeholder="Add Rate Here .. " asp-for="Leather_Interior">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Turbo </label>
+		<input class="form-control" type="checkbox" placeholder="Add Rate Here .. " asp-for="Turbo">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Engine_volume</label>
+		<input class="form-control" type="number" placeholder="Add Rate Here .. " asp-for="Engine_volume">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Cylinders</label>
+		<input class="form-control" type="number" placeholder="Add Rate Here .. " asp-for="Cylinders">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Levy</label>
+		<input class="form-control" type="number" placeholder="Add Rate Here .. " asp-for="Levy">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Wheel</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Wheel">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Drive_Wheels</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Drive_Wheels">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Gear_Box_Type</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Gear_Box_Type">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Doors</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Doors">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Car_FuelType</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Car_FuelType">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Category</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Category">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Airbags</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Airbags">
+		<br />
+
+	</div>
+
+
+	<div class="form-group">
+		<label>Car Brand</label>
+		<select asp-for="Brand_Id" class="form-control" asp-items="(SelectList)ViewBag.BrandList">
+		</select>
+		<span asp-validation-for="Brand_Id" class="text-danger"></span>
+
+	</div>
+
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<a asp-action="Index" asp-controller="Cars" class="btn btn-danger btn-lg">Cancel</a>
+	</div>
+
+				
+</form>
+
