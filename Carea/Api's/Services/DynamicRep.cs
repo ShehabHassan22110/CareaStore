@@ -4,7 +4,7 @@ using Carea.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace amal.Api_s.Services
+namespace Carea.Api_s.Services
 {
     public class DynamicRep<T> : IDynamicRep<T> where T : class
     {

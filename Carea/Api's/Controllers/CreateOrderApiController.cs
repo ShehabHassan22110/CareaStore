@@ -30,7 +30,7 @@ namespace Carea.Api_s.Controllers {
 			try {
 
 				if (ModelState.IsValid) {
-
+					obj.Status = "Pending";
 					createOrderService.Create(obj);
 
 					CustomResponse Cusotm = new CustomResponse {

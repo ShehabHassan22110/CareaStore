@@ -14,7 +14,7 @@ namespace Carea.Models {
 			public int ShippingId { get; set; }
 			public virtual Shipping? Shipping { set; get; }
 			public string ApplicationUserId { get; set; }
-			public string Status { get; set; } = "Pending";
+			public string? Status { get; set; } 
 			public virtual ApplicationUser? ApplicationUser { set; get; }
 			public DateTime SevedDate { get; set; }
 			public double TAX { get; set; }

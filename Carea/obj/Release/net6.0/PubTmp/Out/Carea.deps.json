@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "CorePush": "3.1.1",
           "EmailServices": "1.0.0",
           "MailKit": "3.5.0",
           "Microsoft.AspNet.Identity.Core": "2.2.3",
@@ -49,6 +50,18 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "CorePush/3.1.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "Portable.BouncyCastle": "1.9.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/CorePush.dll": {
+            "assemblyVersion": "3.1.1.0",
+            "fileVersion": "3.1.1.0"
           }
         }
       },
@@ -2541,6 +2554,13 @@
       "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
+    },
+    "CorePush/3.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hJcLlEIJ7DqyuRHIxBEBiBxTuMQM4ZOir7Pq2qckNvaFb5wRmShF3/a6Q6uoPIudylqMzRkxX8Ryl6kHmeSa1Q==",
+      "path": "corepush/3.1.1",
+      "hashPath": "corepush.3.1.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

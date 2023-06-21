@@ -51120,7 +51120,7 @@ var Rect$1 = Rect;
 var each$8 = each$1;
 
 var DRAG_THRESHOLD = 3;
-var PATH_LABEL_NOAMAL = ['label'];
+var PATH_LABEL_NOCarea = ['label'];
 var PATH_LABEL_EMPHASIS = ['emphasis', 'label'];
 var PATH_UPPERLABEL_NORMAL = ['upperLabel'];
 var PATH_UPPERLABEL_EMPHASIS = ['emphasis', 'upperLabel'];
@@ -51922,7 +51922,7 @@ function renderNode(
         }
 
         var normalLabelModel = nodeModel.getModel(
-            upperLabelRect ? PATH_UPPERLABEL_NORMAL : PATH_LABEL_NOAMAL
+            upperLabelRect ? PATH_UPPERLABEL_NORMAL : PATH_LABEL_NOCarea
         );
         var emphasisLabelModel = nodeModel.getModel(
             upperLabelRect ? PATH_UPPERLABEL_EMPHASIS : PATH_LABEL_EMPHASIS

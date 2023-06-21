@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Carea.Entities;
 using Carea.Models;
 using Carea.ViewModels;
 
@@ -26,8 +27,17 @@ namespace Mapper
 			CreateMap<OrderRequest, OrderRequestVM>();
 			CreateMap<OrderRequestVM, OrderRequest>();
 
+            CreateMap<Complaints_Suggestions,Complaints_SuggestionsVM>();
+            CreateMap<Complaints_SuggestionsVM,Complaints_Suggestions>();
+
+            CreateMap<PrivacyPolicy,PrivacyPolicyVM>();
+            CreateMap<PrivacyPolicyVM,PrivacyPolicy>();
+
+            CreateMap<Terms_Conditions,Terms_ConditionsVM>();
+            CreateMap<Terms_ConditionsVM,Terms_Conditions>();
 
 
-		}
+
+        }
     }
 }

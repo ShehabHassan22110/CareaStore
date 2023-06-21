@@ -22,6 +22,7 @@ namespace Carea.Api_s.Services {
 			order.ShippingId = obj.ShippingId;
 			order.Amount = obj.Amount;
 			order.Address = obj.Address;
+			order.Status = obj.Status; 
 
 			db.CreateOrder.Add(order);
 			db.SaveChanges();
@@ -45,15 +46,15 @@ namespace Carea.Api_s.Services {
 					Shipping = a.Shipping,
 					Amount = a.Amount,
 					Address= a.Address,
-					Status = "Pending"
+                    Status = a.Status
 
-				}); 
+                }); 
 
 			return data;
 
 		}
 
-		public async Task<IEnumerable<CreateOrderVM>> CreateOrderByUserIdAndItemId(string UserId, int CreateOrderId) {
+		public async Task<IEnumerable<CreateOrderVM>> GetOrderByUserIdAndItemId(string UserId, int CreateOrderId) {
 			var data = db.CreateOrder.Where(a => a.ApplicationUserId == UserId && a.Id == CreateOrderId).Select(a => new CreateOrderVM {
 
 				Id = a.Id,
@@ -65,9 +66,11 @@ namespace Carea.Api_s.Services {
 				ShippingId = a.ShippingId,
 				Shipping = a.Shipping,
 				Amount = a.Amount,
-				Address = a.Address
+				Address = a.Address,
+                Status=a.Status
 
-			});
+
+            });
 			return data;
 
 		}

@@ -1,4 +1,4 @@
-using amal.Api_s.Services;
+using Carea.Api_s.Services;
 using Carea.Api_s.Interfaces;
 using Carea.Api_s.Services;
 using Carea.BLL.Interface;
@@ -49,6 +49,9 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IBrandRep, BrandRep>();
 builder.Services.AddTransient<ICarsRep, CarsRep>();
 builder.Services.AddTransient<IOffersRep, OffersRep>();
+builder.Services.AddTransient<IComplaints_SuggestionsService,Complaints_SuggestionsService>();
+builder.Services.AddTransient<IPrivacyPolicyService,PrivacyPolicyService>();
+builder.Services.AddTransient<ITerms_ConditionsSevice,Terms_ConditionsService>();
 //FcmNotification
 builder.Services.AddTransient<INotificationService,NotificationService>();
 builder.Services.AddHttpClient<FcmSender>();

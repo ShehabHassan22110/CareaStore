@@ -1,4 +1,5 @@
-﻿using Carea.Extend;
+﻿using Carea.Entities;
+using Carea.Extend;
 
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,9 @@ namespace Carea.Models
         public DbSet<Shipping> Shipping { get; set; }
 		public virtual DbSet<CreateOrder> CreateOrder { set; get; }
 		public virtual DbSet<OrderRequest> OrderRequest { set; get; }
+		public virtual DbSet<Complaints_Suggestions> Complaints_Suggestions { set; get; }
+		public virtual DbSet<Terms_Conditions> Terms_Conditions { set; get; }
+		public virtual DbSet<PrivacyPolicy> PrivacyPolicy { set; get; }
 
 
 	}
