@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FD/JuvOKu05zRmNVXvSPTA/w2b3EZ3udMya+1htmbPMutAweLv9tPU+zzLxO3N1KA/l4tYHxYf/ZAH6W1bAdPg==",
+  "dgSpecHash": "8n/AQKQTn97iVvZzFjV8yb5FtPKl3y/ZBcMZ/he3rMeyr+EpRtfvmhq8ehHNUOzs0cEX+0vdPitdgAJBmW0jEw==",
   "success": true,
-  "projectFilePath": "F:\\Carea Final Project\\EmailServices\\EmailServices.csproj",
+  "projectFilePath": "F:\\Carea Project\\EmailServices\\EmailServices.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fg\\.nuget\\packages\\mailkit\\3.4.1\\mailkit.3.4.1.nupkg.sha512",
     "C:\\Users\\fg\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",

@@ -148,3 +148,13 @@ F:\Carea Final\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInfo.
 F:\Carea Final\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
 F:\Carea Final\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.dll
 F:\Carea Final\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.pdb
+F:\Carea Project\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.deps.json
+F:\Carea Project\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.dll
+F:\Carea Project\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.pdb
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.dll
+F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.pdb

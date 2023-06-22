@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Carea Project\\New Repo For Carea\\Carea\\Carea.csproj": {}
+    "F:\\Carea Project\\Carea\\Carea.csproj": {}
   },
   "projects": {
-    "D:\\Carea Project\\New Repo For Carea\\Carea\\Carea.csproj": {
+    "F:\\Carea Project\\Carea\\Carea.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Carea Project\\New Repo For Carea\\Carea\\Carea.csproj",
+        "projectUniqueName": "F:\\Carea Project\\Carea\\Carea.csproj",
         "projectName": "Carea",
-        "projectPath": "D:\\Carea Project\\New Repo For Carea\\Carea\\Carea.csproj",
-        "packagesPath": "C:\\Users\\esooz\\.nuget\\packages\\",
-        "outputPath": "D:\\Carea Project\\New Repo For Carea\\Carea\\obj\\",
+        "projectPath": "F:\\Carea Project\\Carea\\Carea.csproj",
+        "packagesPath": "C:\\Users\\fg\\.nuget\\packages\\",
+        "outputPath": "F:\\Carea Project\\Carea\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\esooz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Carea Project\\New Repo For Carea\\EmailServices\\EmailServices.csproj": {
-                "projectPath": "D:\\Carea Project\\New Repo For Carea\\EmailServices\\EmailServices.csproj"
+              "F:\\Carea Project\\EmailServices\\EmailServices.csproj": {
+                "projectPath": "F:\\Carea Project\\EmailServices\\EmailServices.csproj"
               }
             }
           }
@@ -130,21 +135,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Carea Project\\New Repo For Carea\\EmailServices\\EmailServices.csproj": {
+    "F:\\Carea Project\\EmailServices\\EmailServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Carea Project\\New Repo For Carea\\EmailServices\\EmailServices.csproj",
+        "projectUniqueName": "F:\\Carea Project\\EmailServices\\EmailServices.csproj",
         "projectName": "EmailServices",
-        "projectPath": "D:\\Carea Project\\New Repo For Carea\\EmailServices\\EmailServices.csproj",
-        "packagesPath": "C:\\Users\\esooz\\.nuget\\packages\\",
-        "outputPath": "D:\\Carea Project\\New Repo For Carea\\EmailServices\\obj\\",
+        "projectPath": "F:\\Carea Project\\EmailServices\\EmailServices.csproj",
+        "packagesPath": "C:\\Users\\fg\\.nuget\\packages\\",
+        "outputPath": "F:\\Carea Project\\EmailServices\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\esooz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -152,6 +161,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -207,7 +217,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
