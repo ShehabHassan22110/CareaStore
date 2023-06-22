@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 using Carea.Models;
 using Carea.API.Models;
+using Carea.BLL.Interface;
 
 namespace Carea.Api_s.Controllers {
 
@@ -18,9 +19,11 @@ namespace Carea.Api_s.Controllers {
 
 		#region CTOR
 		private readonly ICreateOrderService createOrderService;
+        private readonly IOrderRequestRep _Ident;
 
-		public CreateOrderApiController(ICreateOrderService createOrderService) {
+        public CreateOrderApiController(ICreateOrderService createOrderService, IOrderRequestRep Ident) {
 			this.createOrderService = createOrderService;
+			this._Ident = Ident;	
 		}
 		#endregion
 
@@ -33,7 +36,19 @@ namespace Carea.Api_s.Controllers {
 					obj.Status = "Pending";
 					createOrderService.Create(obj);
 
-					CustomResponse Cusotm = new CustomResponse {
+
+                    if (obj.RequestOrderId != 0 || obj.RequestOrderId != null)
+                    {
+                        var olddata = _Ident.GetById(obj.RequestOrderId);
+                        olddata.Statues = 3;
+                        _Ident.Edit(olddata);
+                    }
+
+
+
+
+
+                    CustomResponse Cusotm = new CustomResponse {
 
 						Code = "200",
 						Message = "Order Created Successfully ! ",
@@ -54,11 +69,11 @@ namespace Carea.Api_s.Controllers {
 
 		#region DeleteOrder
 		[HttpDelete("DeleteOrder")]
-		public IActionResult DeleteOrder(string ApplicationUserId, int CarsId) {
+		public IActionResult DeleteOrder(string ApplicationUserId, int OrderId) {
 			try {
 
 				if (ModelState.IsValid) {
-					createOrderService.Delete(ApplicationUserId, CarsId);
+					createOrderService.Delete(ApplicationUserId, OrderId);
 
 					CustomResponse Cusotm = new CustomResponse {
 

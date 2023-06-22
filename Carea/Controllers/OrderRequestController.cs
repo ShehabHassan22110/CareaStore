@@ -10,12 +10,14 @@ namespace Carea.Controllers
     public class OrderRequestController : Controller
     {
         private readonly IOrderRequestRep _Ident;
+        private readonly ICreateOrderServive _orders;
         private readonly IMapper mapper;
 
-        public OrderRequestController(IMapper mapper, IOrderRequestRep ident)
+        public OrderRequestController(IMapper mapper, IOrderRequestRep ident, ICreateOrderServive orders)
         {
             this.mapper = mapper;
             this._Ident = ident;
+            _orders = orders;
         }
 
         public IActionResult Index()
@@ -81,8 +83,14 @@ namespace Carea.Controllers
             var olddata = _Ident.GetById(model.Id);
             olddata.Statues = 1;
 
-            //var data = mapper.Map<OrderRequest>(model);
-            //data.Statues = 1;
+
+
+            CreateOrderVM orderObj = new CreateOrderVM
+            {
+                CarsId= olddata.CarId,
+                ApplicationUser= model.ApplicationUser,
+            };
+
                 _Ident.Edit(olddata);
                 return RedirectToAction("Index");
 

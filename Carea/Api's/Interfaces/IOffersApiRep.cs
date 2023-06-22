@@ -24,6 +24,7 @@ namespace Carea.Api_s.Interfaces
             var data = db.Offers.Include("Cars.Car_Photo_Color")
                 .Include("Cars.Brand")
                 .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser")
                 .Where(a => a.Id == id).Select(a => new OffersApiModel
             {
                 CarData=a.Cars,
@@ -46,6 +47,8 @@ namespace Carea.Api_s.Interfaces
                 .Include("Cars.Car_Photo_Color")
                 .Include("Cars.Brand")
                 .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser")
+
                 .Select(a => new OffersApiModel
             {
 

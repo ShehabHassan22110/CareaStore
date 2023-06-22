@@ -2,6 +2,7 @@
 using Carea.Models;
 using Carea.ViewModels;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Carea.Api_s.Interfaces
 {
@@ -11,6 +12,8 @@ namespace Carea.Api_s.Interfaces
          Task<IEnumerable<OrderRequestVM>> GetbyUserId(string UserId);
         public OrderRequest Edite(OrderRequestVM obj);
         public OrderRequestVM GetbycarUserId(int carId, string userId);
+        public void Delete(int RequestOrderId);
+         Task<IEnumerable<OrderRequestVM>> GetOldRequestsbyUserId(string UserId);
     }
     public class OrderRequestApiRep : IOrderRequestApiRep
     {
@@ -41,25 +44,37 @@ namespace Carea.Api_s.Interfaces
         {
             var OldData = db.OrderRequest.Find(obj.Id);
 
-            ////OldData.Id = obj.Id;
-            //OldData.UserId = obj.UserId;
-            //OldData.CarId = obj.CarId;
-            //OldData.Rate = obj.Rate;
-            //OldData.Comment = obj.Comment;
-            //OldData.UserImg = obj.UserImg;
-
-            ////db.OrderRequest.(rate);
-            ////db.Entry(rate).State = EntityState.Modified;
-            //db.SaveChanges();
-
-            //var data = db.OrderRequest.OrderBy(a => a.Id).LastOrDefault();
             return OldData;
         }
 
         public async Task<IEnumerable<OrderRequestVM>> GetbyUserId(string UserId)
         {
 
-            var data = db.OrderRequest.Where(a => a.ApplicationUserId == UserId).Select(a => new OrderRequestVM
+            var data = db.OrderRequest.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser")
+                .Where(a => a.ApplicationUserId == UserId && a.Statues<3).Select(a => new OrderRequestVM
+            {
+                Id = a.Id,
+                OfferdPrice = a.OfferdPrice,
+                Statues=a.Statues,
+                CarId=a.CarId,
+                Cars = a.Cars,
+                ApplicationUser = a.ApplicationUser,
+
+            });
+
+            return data;
+        }
+        public async Task<IEnumerable<OrderRequestVM>> GetOldRequestsbyUserId(string UserId)
+        {
+
+            var data = db.OrderRequest.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser")
+                .Where(a => a.ApplicationUserId == UserId && a.Statues==3).Select(a => new OrderRequestVM
             {
                 Id = a.Id,
                 OfferdPrice = a.OfferdPrice,
@@ -75,7 +90,11 @@ namespace Carea.Api_s.Interfaces
         public OrderRequestVM GetbycarUserId(int carId, string userId)
         {
 
-            var data = db.OrderRequest.Where(a => a.CarId == carId && a.ApplicationUserId == userId).Select(a => new OrderRequestVM
+            var data = db.OrderRequest.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                 .Include("Cars.Car_Rate.ApplicationUser")
+.Where(a => a.CarId == carId && a.ApplicationUserId == userId).Select(a => new OrderRequestVM
             {
                 Id = a.Id,
                 OfferdPrice=a.OfferdPrice,
@@ -89,5 +108,14 @@ namespace Carea.Api_s.Interfaces
 
             return data;
         }
+
+
+        public void Delete( int RequestOrderId)
+        {
+            var data = db.OrderRequest.Where(a=>a.Id == RequestOrderId).FirstOrDefault();
+            db.OrderRequest.Remove(data);
+            db.SaveChanges();
+        }
+
     }
 }

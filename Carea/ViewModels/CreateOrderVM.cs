@@ -6,6 +6,7 @@ namespace Carea.ViewModels {
 	public class CreateOrderVM
     {
         public int Id { get; set; }
+        public int RequestOrderId { get; set; }
 
         [Required]
 		public int CarsId { get; set; }
@@ -20,8 +21,7 @@ namespace Carea.ViewModels {
 		public double TAX { get; set; }
 		public double Amount { get; set; }
 		public string Address { get; set; }
-		public string? Status { get; set; } 
-
+		public string? Status { get; set; }
 
 
 

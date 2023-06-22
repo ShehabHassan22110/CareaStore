@@ -1,6 +1,7 @@
 ﻿using Carea.API.Models;
 using Carea.Api_s.Interfaces;
 using Carea.Api_s.Models;
+using Carea.Api_s.Services;
 using Carea.BLL.Interface;
 using Carea.Extend;
 using Carea.ViewModels;
@@ -62,7 +63,7 @@ namespace Carea.Api_s.Controllers
 
         }
 
-        //Get Bu User Id
+        //Get By User Id
         [HttpPost]
         [Route("/api/GetOrderRequest_ByUserId/{UserId}")]
         public async Task<IActionResult> Get(string UserId)
@@ -102,8 +103,48 @@ namespace Carea.Api_s.Controllers
                 });
 
             }
+        }        //Get Old By User Id
+        [HttpPost]
+        [Route("/api/GetOldRequestsbyUserId/{UserId}")]
+        public async Task<IActionResult> GetOldRequestsbyUserId(string UserId)
+        {
+            try
+            {
+                   var data =await _cont.GetOldRequestsbyUserId(UserId);
+                if (data!=null && data.Count()!=0 )
+                {
+                    OrderRequestCustomResponse Cusotm = new OrderRequestCustomResponse
+                    {
+
+                        Records = data,
+                        Code = "200",
+                        Message = "Old Requestes Data Returned",
+                        Status = "Done"
+
+                    };
+                    return Ok(Cusotm);
+                }
+
+
+                return NotFound(new CustomResponse
+                {
+                    Code = "400",
+                    Message = "Invalid Id Or no data ",
+                    Status = "Faild"
+                });
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new CustomResponse
+                {
+                    Code = "400",
+                    Message = ex.Message,
+                    Status = "Faild"
+                });
+
+            }
         }
-         //Get Bu User Id And Car Id
+         //Get By User Id And Car Id
         [HttpPost]
         [Route("/api/GetOrderRequest_ByUserAndCarId")]
         public IActionResult GetByUserAndCarId(string UserId , int CarId)
@@ -135,6 +176,48 @@ namespace Carea.Api_s.Controllers
 
             }
         }
+
+
+
+
+        #region DeleteRequest
+        [HttpDelete("/api/DeleteRequest")]
+        public IActionResult DeleteRequest( int requestId)
+        {
+            try
+            {
+
+                if (ModelState.IsValid)
+                {
+                    _cont.Delete(requestId);
+
+                    CustomResponse Cusotm = new CustomResponse
+                    {
+
+                        Code = "200",
+                        Message = "Request Deleted Successfully ! ",
+                        Status = "Done"
+
+                    };
+                    return Ok(Cusotm);
+
+                }
+
+                return StatusCode(400, new CustomResponse { Code = "400", Message = "Invalid Data Annotation" });
+
+            }
+            catch (Exception ex)
+            {
+                return NotFound(new CustomResponse
+                {
+                    Code = "400",
+                    Message = ex.Message,
+                    Status = "Faild"
+                });
+            }
+        }
+        #endregion
+
 
 
     }

@@ -27,8 +27,8 @@ namespace Carea.Api_s.Services {
 			db.CreateOrder.Add(order);
 			db.SaveChanges();
 		}
-		public void Delete(string ApplicationUserId, int CarsId) {
-			var data = db.CreateOrder.Where(a => a.ApplicationUserId == ApplicationUserId && a.CarsId == CarsId).FirstOrDefault();
+		public void Delete(string ApplicationUserId, int OrderId) {
+			var data = db.CreateOrder.Where(a => a.ApplicationUserId == ApplicationUserId && a.Id == OrderId).FirstOrDefault();
 			db.CreateOrder.Remove(data);
 			db.SaveChanges();
 		}
