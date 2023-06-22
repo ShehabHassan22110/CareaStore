@@ -8,3 +8,44 @@
 	<h1>  Delete Privacy Policy</h1>
 </center>
 
+<!-- // Basic multiple Column Form section start -->
+<section id="multiple-column-form">
+    <div class="row match-height">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Details</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form" asp-action="Delete" asp-controller="PrivacyPolicy">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+
+                                        <div class="form-label-group">
+                                            <input asp-for="Id" type="text" id="first-name-column" class="form-control" placeholder="Id">
+                                            <label asp-for="Id">Id</label>
+                                        </div>
+                                        <div class="form-label-group">
+                                            <input asp-for="Details" type="text" id="first-name-column" class="form-control" placeholder="Details" name="fname-column" readonly>
+                                            <label asp-for="Details">Details</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-danger mr-1 mb-1">Delete</button>
+                                        <a asp-action="Index" asp-controller="PrivacyPolicy" type="submit" class="btn btn-outline-danger mr-1 mb-1">Back to Index</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic Floating Label Form section end -->

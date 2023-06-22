@@ -312,42 +312,50 @@
         </li>
     </ul>
     <!-- END: Header-->
-    <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
-                <li class="nav-Model mr-auto">
-                    <a class="navbar-brand" asp-action="Index" asp-controller="Home">
+                <li class="nav-item mr-auto">
+                    <a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
                         <div class="brand-logo"></div>
                         <h2 class="brand-text mb-0">Carea</h2>
                     </a>
                 </li>
-@*                <li class="nav-Model nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
-*@            </ul>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
+            </ul>
         </div>
         <div class="shadow-bottom"></div>
         <div class="main-menu-content">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item">
+                    <a href="index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2">1</span></a>
+                    <ul class="menu-content">
+                        <li class=" nav-Model">
+                            <a asp-action="Index" asp-controller="Home"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Home</span></a>
 
-                <li class=" nav-Model">
-                    <a asp-action="Index" asp-controller="Home"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Home</span></a>
+                        </li>
 
+                    </ul>
                 </li>
-           
+                <li class=" navigation-header">
+                    <span>Apps</span>
+                </li>
+
+
 
 
                 <li class=" nav-item">
-                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User</span></a>
+                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User</span><span class="badge badge badge-primary badge-pill float-right mr-2">New</span></a>
                     <ul class="menu-content">
-                        <li >
+                        <li>
                             <a asp-controller="Users" asp-action="Index"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">View All Users</span></a>
                         </li>
 
-                       
+
                     </ul>
                 </li>
-                
-            
+
+
                 <li class="nav-Model">
                     <a asp-action="LogIn" asp-controller="Account">
                         <i class="feather icon-user-plus"></i>
@@ -360,13 +368,13 @@
                         <span class="menu-title">Sign up </span>
                     </a>
                 </li>
-              <li class=" nav-Model">
+                <li class=" nav-Model">
                     <a asp-action="Index" asp-controller="Brand">
                         <i class="feather icon-server"></i>
                         <span class="menu-title" data-i18n="Table">Brands</span>
                     </a>
                 </li>
-              <li class=" nav-Model">
+                <li class=" nav-Model">
                     <a asp-action="Index" asp-controller="Cars">
                         <i class="feather icon-server"></i>
                         <span class="menu-title" data-i18n="Table">Cars</span>
@@ -378,50 +386,33 @@
                         <i class="feather icon-server"></i>
                         <span class="menu-title" data-i18n="Table">Offers</span>
                     </a>
-                </li>  
+                </li>
                 <li class=" nav-Model">
                     <a asp-action="Index" asp-controller="OrderRequest">
                         <i class="feather icon-server"></i>
                         <span class="menu-title" data-i18n="Table">Order Request </span>
                     </a>
                 </li>
-         
-@*                <li class=" nav-Model  ">
-                    <a href="#"><i class="feather icon-server"></i><span class="menu-title" data-i18n="User">الوثائق</span></a>
-
+                <li class=" nav-item">
+                    <a href="#"><i class="feather icon-user"></i><span class="menu-title" data-i18n="User">User</span></a>
                     <ul class="menu-content">
                         <li>
-                            <a asp-action="" asp-controller=""><i class="feather icon-circle"></i><span class="menu-Model" data-i18n="List"></span></a>
+                            <a href="app-user-list.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="List">List</span></a>
                         </li>
-
                         <li>
-                            <a asp-action="" asp-controller=""><i class="feather icon-circle"></i><span class="menu-Model" data-i18n="View"></span></a>
+                            <a href="app-user-view.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="View">View</span></a>
                         </li>
-
                         <li>
-                            <a asp-action="" asp-controller=""><i class="feather icon-circle"></i><span class="menu-Model" data-i18n="Edit"></span></a>
+                            <a href="app-user-edit.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Edit">Edit</span></a>
                         </li>
-
-                        <li>
-                            <a asp-action="" asp-controller=""><i class="feather icon-circle"></i><span class="menu-Model" data-i18n="Edit"> </span></a>
-                        </li>
-
                     </ul>
                 </li>
-*@
-
-              @*  <li class=" nav-Model">
-                    <a asp-action="" asp-controller="">
-                        <i class="feather icon-server"></i>
-                        <span class="menu-title" data-i18n="Table"></span>
-                    </a>
-                </li>*@
-         
+                <li class=" navigation-header">
+                    <span>UI Elements</span>
+                </li>
+                
+                
                
-              
-
-            </ul>
-
         </div>
     </div>
     <!-- END: Main Menu-->
@@ -471,5 +462,7 @@
 <!-- END: Body-->
 
 </html>
+
+
 
 

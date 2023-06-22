@@ -8,3 +8,40 @@
 	<h1>Edit Privacy Policy</h1>
 </center>
 
+<!-- // Basic multiple Column Form section start -->
+<section id="multiple-column-form">
+    <div class="row match-height">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Details</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body">
+                        <form class="form" asp-action="Edit" asp-controller="PrivacyPolicy">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-12">
+
+                                        <div class="form-label-group">
+                                            <input asp-for="Details" type="text" id="first-name-column" class="form-control" placeholder="Details"  >
+                                            <label asp-for="Details">Details</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-success mr-1 mb-1">Edit</button>
+                                        <a asp-action="Index" asp-controller="PrivacyPolicy" type="submit" class="btn btn-outline-success mr-1 mb-1">Back to Index</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- // Basic Floating Label Form section 

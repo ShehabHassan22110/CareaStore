@@ -9,6 +9,58 @@
        All Terms and Conditions
     </h1>
 </center>
+<!-- Scroll - horizontal and vertical table -->
+<section id="horizontal-vertical">
+    <div class="dt-buttons btn-group">
+        <a asp-action="Create" asp-controller="TermsConditions" class="btn btn-outline-primary" style="margin:20px">
+            <span><i class="feather icon-plus"></i></span>
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">All Privacy Policy </h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table class="table nowrap scroll-horizontal-vertical">
+                                <thead>
+                                    <tr>
+                                        <th>Details</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
 
-			
 
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model) {
+                                        <tr>
+                                            <td>@item.Details</td>
+                                            <td class="product-action">
+                                                <a asp-action="Edit" asp-controller="TermsConditions" class="btn btn-success" asp-route-id="@item.Id">
+                                                    <span class="action-edit"><i class="feather icon-edit">Edit</i></span>
+                                                </a>
+                                            </td>
+                                            <td class="product-action">
+                                                <a asp-action="Delete" asp-controller="TermsConditions" class="btn btn-danger" asp-route-id="@item.Id">
+                                                    <span class="action-delete"><i class="feather icon-trash ">Delete</i></span>
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ Scroll - horizontal and vertical table -->
