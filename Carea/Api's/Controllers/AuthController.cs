@@ -82,7 +82,7 @@ namespace Carea.Controllers
         }
 
 
-        [HttpPost("ForgetPassword/{Email}")]
+        [HttpPost("ForgetPassword/{email}")]
         public async Task<IActionResult> ForgetPassword(string email)
         {
             if (string.IsNullOrEmpty(email))
