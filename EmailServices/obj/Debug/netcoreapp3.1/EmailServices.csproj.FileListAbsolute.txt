@@ -158,3 +158,13 @@ F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInf
 F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
 F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.dll
 F:\Carea Project\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.pdb
+E:\Carea Project\New Repo For Carea\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.deps.json
+E:\Carea Project\New Repo For Carea\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.dll
+E:\Carea Project\New Repo For Carea\EmailServices\bin\Debug\netcoreapp3.1\EmailServices.pdb
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.dll
+E:\Carea Project\New Repo For Carea\EmailServices\obj\Debug\netcoreapp3.1\EmailServices.pdb

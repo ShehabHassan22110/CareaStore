@@ -10,14 +10,13 @@ namespace Carea.Controllers
     public class OrderRequestController : Controller
     {
         private readonly IOrderRequestRep _Ident;
-        private readonly ICreateOrderServive _orders;
+        //private readonly ICreateOrderServive _orders;
         private readonly IMapper mapper;
 
-        public OrderRequestController(IMapper mapper, IOrderRequestRep ident, ICreateOrderServive orders)
+        public OrderRequestController(IMapper mapper, IOrderRequestRep ident)
         {
             this.mapper = mapper;
             this._Ident = ident;
-            _orders = orders;
         }
 
         public IActionResult Index()
