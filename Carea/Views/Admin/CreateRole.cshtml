@@ -1,0 +1,41 @@
+﻿@model CreateRole;
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Basic Vertical form layout section start -->
+<section id="basic-vertical-layouts">
+    <div class="row match-height">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Create Role</h4>
+            </div>
+            <div class="card-content">
+                <div class="card-body">
+                    <form class="form form-vertical" asp-action="CreateRole" asp-controller="Admin" enctype="multipart/form-data">
+                        <div class="form-body">
+                            <div class="row">
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="first-name-vertical"> RoleName</label>
+                                        <input type="text" id="first-name-vertical" class="form-control" asp-for="RoleName" placeholder="RoleName">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary mr-1 mb-1">Create</button>
+                                    <button type="reset" class="btn btn-outline-warning mr-1 mb-1">الغاء</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- // Basic Vertical form layout section end -->

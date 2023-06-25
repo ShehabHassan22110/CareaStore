@@ -1,6 +1,10 @@
-﻿@{
+﻿@model RegisterModel;
+@{
+    ViewData["Title"] = "Register";
     Layout = null;
 }
+
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -9,10 +13,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="description" content="Vuexy  admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Register</title>
+    <title>Register Page </title>
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -41,7 +45,7 @@
 <!-- END: Head-->
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
+<body class="vertical-layout vertical-menu-modern dark-layout 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column" data-layout="dark-layout">
     <!-- BEGIN: Content-->
     <div class="app-content content">
         <div class="content-overlay"></div>
@@ -61,54 +65,69 @@
                                     <div class="card rounded-0 mb-0 p-2">
                                         <div class="card-header pt-50 pb-1">
                                             <div class="card-title">
-                                                <h4 class="mb-0">Create Admin</h4>
+                                                <h4 class="mb-0">Create Account</h4>
                                             </div>
                                         </div>
-                                        <p class="px-2">Fill the below form to create a new Admin.</p>
+                                        <p class="px-2">Fill the below form to create a new account.</p>
                                         <div class="card-content">
                                             <div class="card-body pt-0">
-                                                <form asp-controller="Account" asp-action="Registration">
+                                                <form asp-action="Registration" asp-controller="Account" method="POST">
+                                                    <div asp-validation-summary=All></div>
+
                                                     <div class="form-label-group">
-                                                        <input type="text" id="inputName" class="form-control" placeholder="Name" required>
-                                                        <label for="inputName">Full Name</label>
+                                                        <input type="text" id="inputEmail" class="form-control" placeholder="FullName" required asp-for="FullName">
+                                                        <label for="inputEmail">Full Name</label>
+                                                        <span asp-validation-for="FullName" class="text-danger"></span>
+
+                                                    </div> 
+                                                    <div class="form-label-group">
+                                                        <input type="text" id="inputEmail" class="form-control" placeholder="Nick name" required asp-for="Nickname">
+                                                        <label for="inputEmail">Nick name</label>
+                                                        <span asp-validation-for="Nickname" class="text-danger"></span>
+
+                                                    </div>   <div class="form-label-group">
+                                                        <input type="date" id="inputEmail" class="form-control"  required asp-for="BirthDate">
+                                                        <label for="inputEmail">BirthDate</label>
+                                                        <span asp-validation-for="BirthDate" class="text-danger"></span>
+
+                                                    </div>
+
+
+
+                                                    <div class="form-label-group">
+                                                        <input type="text" class="form-control" placeholder="PIN" required asp-for="PIN">
+                                                        <label for="inputEmail">PIN</label>
+                                                        <span asp-validation-for="PIN" class="text-danger"></span>
+
+                                                    </div>
+
+                                                    <div class="form-label-group">
+                                                        <input type="text" class="form-control" placeholder="Phone" required asp-for="PhoneNumber">
+                                                        <label for="inputEmail">Phone Number</label>
+                                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
                                                     </div>
                                                     <div class="form-label-group">
-                                                        <input type="text" id="inputName" class="form-control" placeholder="Name" required>
-                                                        <label for="inputName">Nick Name</label>
-                                                    </div>
-                                                    <div class="form-label-group">
-                                                        <input type="text" id="inputName" class="form-control" placeholder="Name" required>
-                                                        <label for="inputName">Birthdate</label>
-                                                    </div>
-                                                    <div class="form-label-group">
-                                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>
+                                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required asp-for="Email">
                                                         <label for="inputEmail">Email</label>
+                                                        <span asp-validation-for="Email" class="text-danger"></span>
+
                                                     </div>
                                                     <div class="form-label-group">
-                                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required asp-for="Password">
                                                         <label for="inputPassword">Password</label>
+                                                        <span asp-validation-for="Password" class="text-danger"></span>
+
                                                     </div>
-                                                    <div class="form-label-group">
-                                                        <input type="password" id="inputConfPassword" class="form-control" placeholder="Confirm Password" required>
-                                                        <label for="inputConfPassword">Confirm Password</label>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <div class="col-12">
-                                                            <fieldset class="checkbox">
-                                                                <div class="vs-checkbox-con vs-checkbox-primary">
-                                                                    <input type="checkbox" checked>
-                                                                    <span class="vs-checkbox">
-                                                                        <span class="vs-checkbox--check">
-                                                                            <i class="vs-icon feather icon-check"></i>
-                                                                        </span>
-                                                                    </span>
-                                                                    <span class=""> I accept the terms & conditions.</span>
-                                                                </div>
-                                                            </fieldset>
-                                                        </div>
-                                                    </div>
-                                                    <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
-                                                    <button type="submit" class="btn btn-primary float-right btn-inline">Create</button>
+                                                   @*  <div class="form-label-group">
+                                                        <input type="password" id="inputPassword" class="form-control" placeholder="ConfirmPassword" required asp-for="ConfirmPassword">
+                                                        <label for="inputPassword">ConfirmPassword</label>
+                                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+                                                    </div>*@
+                                                
+                                                    <a asp-action="LogIn" asp-controller="Account" class="btn btn-outline-primary float-left btn-inline mb-50">Login</a>
+                                                    <button type="submit" class="btn btn-primary float-right btn-inline mb-50">Register </button>
                                                 </form>
                                             </div>
                                         </div>
@@ -135,8 +154,6 @@
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
     <!-- END: Page JS-->
-
 </body>
 <!-- END: Body-->
-
 </html>

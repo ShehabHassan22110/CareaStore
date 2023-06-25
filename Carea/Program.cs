@@ -1,6 +1,5 @@
 using Carea.Api_s.Services;
 using Carea.Api_s.Interfaces;
-using Carea.Api_s.Services;
 using Carea.BLL.Interface;
 using Carea.BLL.Repo;
 using Carea.Extend;
@@ -18,7 +17,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using System.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -36,11 +34,18 @@ builder.Services.AddMvc().AddNewtonsoftJson(opt => {
 });
 
 
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<ApplicationDbContext>(options => 
+
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
 builder.Services.AddSingleton(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 //builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddCors();
 builder.Services.AddRazorPages();
+
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddTransient<IMailService, MailService>();
@@ -124,6 +129,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapRazorPages();

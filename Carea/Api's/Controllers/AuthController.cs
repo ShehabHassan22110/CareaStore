@@ -168,13 +168,13 @@ namespace Carea.Controllers
 
         }
 
-        [HttpPost("EditePassword/{id}")]
-        public async Task<IActionResult> EditePassword(string id, [FromBody] EditePassword model)
+
+        [HttpPost("EditePassword")]
+        public async Task<IActionResult> EditePassword( [FromBody] EditePassword model)
         {
 
             if (ModelState.IsValid)
             {
-                model.Id = id;
                 var data = await _userService.EditePassword(model);
 
                 if (data.IsSuccess)

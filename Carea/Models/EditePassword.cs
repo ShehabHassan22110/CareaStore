@@ -5,7 +5,7 @@ namespace Carea.Models
 {
     public class EditePassword
     {
-        public string Id { get; set; }
+        public string UserId { get; set; }
         [Required]
         public string OldPaassword { get; set; }
         [Required]
@@ -14,5 +14,6 @@ namespace Carea.Models
         [Required]
 
         public string ConfirmNewPassword { get; set; }
+        public string? Token { get; set; }
     }
 }

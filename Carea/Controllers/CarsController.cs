@@ -2,12 +2,15 @@
 using Carea.BLL.Interface;
 using Carea.Models;
 using Carea.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 
 namespace Carea.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class CarsController : Controller
     {
         private readonly ICarsRep _car;

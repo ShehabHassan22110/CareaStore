@@ -1,8 +1,10 @@
 ﻿using Carea.Extend;
+using Carea.Models;
 using Carea.ViewModels;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using EmailService;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Carea.Controllers {
 	public class AccountController : Controller {
@@ -27,7 +29,7 @@ namespace Carea.Controllers {
 		}
 
 		[HttpPost]
-		public async Task<IActionResult> Registration( RegistrationVM model ) {
+		public async Task<IActionResult> Registration(RegisterModel model ) {
 
 			if (ModelState.IsValid) {
 
@@ -36,8 +38,8 @@ namespace Carea.Controllers {
 					FullName = model.FullName,
 					Nickname = model.Nickname,
 					Email = model.Email,
-					BirthDate = model.BirthDate
-					//IsAgree = model.IsAgree
+					BirthDate = model.BirthDate,
+                    Gender = true,
 				};
 
 				var result = await userManager.CreateAsync(user,model.Password);
@@ -76,53 +78,40 @@ namespace Carea.Controllers {
 
 		#region Login (Sign In)
 
-		[HttpGet]
-		public IActionResult Login() {
-			return View();
-		}
+
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> LogIn(LoginModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                //var result = await _userService.LoginUserAsync(model);
+                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, true, false);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home", model.Email);
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid User name or password");
+                    return View(model);
+                }
+            }
+            else
+            {
+                return View(model);
+            }
+        }
+        #endregion
 
 
-		[HttpPost]
-		public async Task<IActionResult> Login( LoginVM model ) {
+        #region LogOff (Sign Out)
 
-			//  try
-			// {
-
-			if (ModelState.IsValid) {
-
-				// var user = await userManager.FindByEmailAsync(model.Email);
-
-				var result = await signInManager.PasswordSignInAsync(model.Email,model.Password,false,false);
-
-				if (result.Succeeded) {
-					return RedirectToAction("Index","Home",model.Email);
-				}
-				else {
-					ModelState.AddModelError("","Invalid UserName or Password");
-					return View(model);
-
-				}
-
-
-			}
-			else {
-				return View(model);
-
-			}
-
-
-
-
-
-
-		}
-
-		#endregion
-
-
-		#region LogOff (Sign Out)
-
-		[HttpPost]
+        [HttpPost]
 		public async Task<IActionResult> LogOff() {
 			await signInManager.SignOutAsync();
 			return RedirectToAction("Login");

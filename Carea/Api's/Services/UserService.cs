@@ -290,31 +290,13 @@ namespace Carea.Services
             {
                 model.Email = user.Email;
             }
-            if (model.FullName==null)
+
+            if (model.FullName == null)
             {
                 model.FullName = user.FullName;
-            } 
-            if (model.PIN==null)
-            {
-                model.PIN = user.PIN;
             }
-           if (model.PhoneNumber==null)
-            {
-                model.PhoneNumber = user.PhoneNumber;
-            }        
-            if (model.NickName==null)
-            {
-                model.NickName = user.Nickname;
-            }
-            if (model.Gender==null)
-            {
-                model.Gender = true;
-            } 
-            if (model.BirthDate==null)
-            {
-                model.BirthDate = DateTime.Now;
-            }
-         
+
+            //chek user exist
             if (user == null)
             {
                 EditeAccountCustomRespon custom = new EditeAccountCustomRespon()
@@ -346,10 +328,7 @@ namespace Carea.Services
             user.FullName = model.FullName;
             user.PhoneNumber = model.PhoneNumber;
             user.UserName = model.Email;
-            user.Nickname = model.NickName;
-            user.Gender = (bool)model.Gender;
-            user.BirthDate = (DateTime)model.BirthDate;
-            user.PIN = (int)model.PIN;
+            //user.PIN = model.PIN;
 
             if (model.Photo != null)
             {
@@ -357,45 +336,42 @@ namespace Carea.Services
                 user.imgUrl = img;
             }
 
+
+
+
+
             var result = await _userManger.UpdateAsync(user);
 
             if (result.Succeeded)
             {
-                #region Token
                 var claims = new[]
               {
-                    new Claim("Id", user.Id),
-                    new Claim("FullName", user.FullName),
-                    new Claim("NickName", user.Nickname),
-                    new Claim("Email", model.Email),
-                    new Claim("PhoneNumber",$"{user.PhoneNumber}"),
-                    new Claim("Gender", $"{user.Gender}"),
-                    new Claim("pin",$"{user.PIN}"),
-                    new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
-                    new Claim("imgurl",$"{user.imgUrl}"),
+                new Claim("Id", user.Id),
+                new Claim("FullName", user.FullName),
+                new Claim("Email", model.Email),
+                new Claim("PhoneNumber",$"{user.PhoneNumber}"),
+                new Claim("gender",$"{user.Gender}"),
+                new Claim("Img",$"{user.imgUrl}"),
 
-                };
-
+            };
 
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
 
                 var token = new JwtSecurityToken(
                     issuer: _configuration["JWT:Issuer"],
                     audience: _configuration["JWT:Audience"],
-                     claims: claims,
+                    claims: claims,
                     expires: DateTime.Now.AddDays(30),
                     signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
 
                 string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
-                #endregion//Token
-
                 EditeAccountCustomRespon custom = new EditeAccountCustomRespon()
                 {
                     Message = "Account Updated Successfully",
+                    Token = tokenAsString,
                     Code = "200",
                     Status = "succeed",
                     IsSuccess = true,
-                    Token = tokenAsString,
 
 
                 };
@@ -416,9 +392,10 @@ namespace Carea.Services
 
         }
 
+
         public async Task<UserManagerResponse> EditePassword(EditePassword model)
         {
-            var user = await _userManger.FindByIdAsync(model.Id);
+            var user = await _userManger.FindByIdAsync(model.UserId);
 
             if (user == null)
                 return new UserManagerResponse
@@ -453,7 +430,7 @@ namespace Carea.Services
             if (result.Succeeded)
                 return new UserManagerResponse
                 {
-                    Message = "Password has been Edited successfully!",
+                    Message = "Password has been Updated Sucessfully!",
                     IsSuccess = true,
                 };
 
@@ -464,6 +441,5 @@ namespace Carea.Services
                 Errors = result.Errors.Select(e => e.Description),
             };
         }
-
     }
 }

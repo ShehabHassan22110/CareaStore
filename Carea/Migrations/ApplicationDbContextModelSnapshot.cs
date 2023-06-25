@@ -36,7 +36,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Complaints_Suggestions");
+                    b.ToTable("Complaints_Suggestions", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Entities.PrivacyPolicy", b =>
@@ -53,7 +53,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PrivacyPolicy");
+                    b.ToTable("PrivacyPolicy", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Entities.Terms_Conditions", b =>
@@ -70,7 +70,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Terms_Conditions");
+                    b.ToTable("Terms_Conditions", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Extend.ApplicationUser", b =>
@@ -182,7 +182,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brand");
+                    b.ToTable("Brand", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.Car_Photo_Color", b =>
@@ -208,7 +208,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("Car_Id");
 
-                    b.ToTable("Car_Photo_Color");
+                    b.ToTable("Car_Photo_Color", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.Car_Rate", b =>
@@ -242,7 +242,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Car_Rate");
+                    b.ToTable("Car_Rate", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.Cars", b =>
@@ -323,7 +323,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("Brand_Id");
 
-                    b.ToTable("Cars");
+                    b.ToTable("Cars", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.CreateOrder", b =>
@@ -368,7 +368,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("ShippingId");
 
-                    b.ToTable("CreateOrder");
+                    b.ToTable("CreateOrder", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.Offers", b =>
@@ -397,7 +397,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.ToTable("Offers");
+                    b.ToTable("Offers", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.OrderRequest", b =>
@@ -427,7 +427,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.ToTable("OrderRequest");
+                    b.ToTable("OrderRequest", (string)null);
                 });
 
             modelBuilder.Entity("Carea.Models.Shipping", b =>
@@ -444,7 +444,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shipping");
+                    b.ToTable("Shipping", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace Carea.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

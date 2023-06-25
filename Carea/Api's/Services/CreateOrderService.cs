@@ -1,6 +1,7 @@
 ﻿using Carea.Api_s.Interfaces;
 using Carea.Models;
 using Carea.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace Carea.Api_s.Services {
 	public class CreateOrderService:ICreateOrderService
@@ -28,13 +29,19 @@ namespace Carea.Api_s.Services {
 			db.SaveChanges();
 		}
 		public void Delete(string ApplicationUserId, int OrderId) {
-			var data = db.CreateOrder.Where(a => a.ApplicationUserId == ApplicationUserId && a.Id == OrderId).FirstOrDefault();
+			var data = db.CreateOrder.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.ApplicationUserId == ApplicationUserId && a.Id == OrderId).FirstOrDefault();
 			db.CreateOrder.Remove(data);
 			db.SaveChanges();
 		}
 
 		public IEnumerable<CreateOrderVM> GetByApplcationUserId(string Userid) {
-			var data = db.CreateOrder.Where(a => a.ApplicationUserId == Userid)
+			var data = db.CreateOrder.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.ApplicationUserId == Userid)
 				.Select(a => new CreateOrderVM {
 					Id = a.Id,
 					ApplicationUserId = a.ApplicationUserId,
@@ -55,7 +62,10 @@ namespace Carea.Api_s.Services {
 		}
 
 		public async Task<IEnumerable<CreateOrderVM>> GetOrderByUserIdAndItemId(string UserId, int CreateOrderId) {
-			var data = db.CreateOrder.Where(a => a.ApplicationUserId == UserId && a.Id == CreateOrderId).Select(a => new CreateOrderVM {
+			var data = db.CreateOrder.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.ApplicationUserId == UserId && a.Id == CreateOrderId).Select(a => new CreateOrderVM {
 
 				Id = a.Id,
 				ApplicationUserId = a.ApplicationUserId,
@@ -76,7 +86,10 @@ namespace Carea.Api_s.Services {
 		}
 
 		public IEnumerable<CreateOrderVM> GetByOrderStatus(string Status) {
-			var data = db.CreateOrder.Where(a => a.Status == Status).Select(a => new CreateOrderVM {
+			var data = db.CreateOrder.Include("Cars.Car_Photo_Color")
+                .Include("Cars.Brand")
+                .Include("Cars.Car_Rate")
+                .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.Status == Status).Select(a => new CreateOrderVM {
 				Id = a.Id,
 				ApplicationUserId = a.ApplicationUserId,
 				ApplicationUser = a.ApplicationUser,
