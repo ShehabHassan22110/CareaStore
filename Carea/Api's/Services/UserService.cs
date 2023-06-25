@@ -296,6 +296,8 @@ namespace Carea.Services
                 model.FullName = user.FullName;
             }
 
+        
+
             //chek user exist
             if (user == null)
             {
@@ -328,7 +330,6 @@ namespace Carea.Services
             user.FullName = model.FullName;
             user.PhoneNumber = model.PhoneNumber;
             user.UserName = model.Email;
-            //user.PIN = model.PIN;
 
             if (model.Photo != null)
             {
@@ -345,13 +346,15 @@ namespace Carea.Services
             if (result.Succeeded)
             {
                 var claims = new[]
-              {
+      {
                 new Claim("Id", user.Id),
                 new Claim("FullName", user.FullName),
+                new Claim("NickName", user.Nickname),
                 new Claim("Email", model.Email),
                 new Claim("PhoneNumber",$"{user.PhoneNumber}"),
-                new Claim("gender",$"{user.Gender}"),
-                new Claim("Img",$"{user.imgUrl}"),
+                new Claim("Gender", $"{user.Gender}"),
+                new Claim("pin",$"{user.PIN}"),
+                new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
 
             };
 
