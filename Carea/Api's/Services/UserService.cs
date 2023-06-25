@@ -66,7 +66,7 @@ namespace Carea.Services
             {
                 #region Token
                 var claims = new[]
-           {
+            {
                 new Claim("Id", user.Id),
                 new Claim("FullName", user.FullName),
                 new Claim("NickName", user.Nickname),
@@ -75,6 +75,8 @@ namespace Carea.Services
                 new Claim("Gender", $"{user.Gender}"),
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
+                new Claim("imgurl",$"{user.imgUrl}"),
+
 
             };
 
@@ -146,7 +148,6 @@ namespace Carea.Services
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
                 new Claim("imgurl",$"{user.imgUrl}"),
-                //new Claim("imgurl",$"{$"Uploads/Users"+user.imgUrl}"),
 
 
             };
@@ -296,6 +297,11 @@ namespace Carea.Services
                 model.FullName = user.FullName;
             }
 
+          if ( model.Gender == null)
+            {
+                model.Gender = user.Gender;
+            }
+
         
 
             //chek user exist
@@ -330,6 +336,8 @@ namespace Carea.Services
             user.FullName = model.FullName;
             user.PhoneNumber = model.PhoneNumber;
             user.UserName = model.Email;
+            user.PIN = model.PIN;
+            user.Gender = model.Gender;
 
             if (model.Photo != null)
             {
@@ -355,6 +363,7 @@ namespace Carea.Services
                 new Claim("Gender", $"{user.Gender}"),
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
+                 new Claim("imgurl",$"{user.imgUrl}"),
 
             };
 
