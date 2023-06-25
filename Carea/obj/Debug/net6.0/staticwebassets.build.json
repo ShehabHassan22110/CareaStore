@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Km11YpzYRT0G5qEZRhbuJLd6VhtJRzmLkk11yTWVwdY=",
+  "Hash": "hux9is3lz38Gxt0V2CgG/F6O7qGcnPDLOxQvTCDUa+Q=",
   "Source": "Carea",
   "BasePath": "_content/Carea",
   "Mode": "Default",
@@ -53905,6 +53905,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Cars\\e1c0bf67-e057-4e01-8f4c-413fc0250105man2.jpg"
+    },
+    {
+      "Identity": "E:\\Carea Project\\New Repo For Carea\\Carea\\wwwroot\\Uploads\\Users\\2c9c8824-56c9-4e13-83bb-c2e4a97fb828images (1).jpg",
+      "SourceId": "Carea",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Carea Project\\New Repo For Carea\\Carea\\wwwroot\\",
+      "BasePath": "_content/Carea",
+      "RelativePath": "Uploads/Users/2c9c8824-56c9-4e13-83bb-c2e4a97fb828images (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Users\\2c9c8824-56c9-4e13-83bb-c2e4a97fb828images (1).jpg"
     },
     {
       "Identity": "E:\\Carea Project\\New Repo For Carea\\Carea\\wwwroot\\Uploads\\Users\\406edf81-ab44-4dca-a4ad-9c6ee825e151images (1).jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mT/Rg5FHcGsxmyoj/ulZr6z8SmL4IEN+hwem4O8YZN8=",
+  "Hash": "iIdt3Sp8GgawQ9NVBs5u5Dm7xVZqfSR9e5+4MLpl5tE=",
   "Source": "Carea",
   "BasePath": "_content/Carea",
   "Mode": "Default",
@@ -54024,6 +54024,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Uploads\\Users\\d148fe6f-b3e2-450e-abf8-09eadf277b05IMG_20230519_111227398.jpg"
+    },
+    {
+      "Identity": "E:\\Carea Project\\New Repo For Carea\\Carea\\wwwroot\\Uploads\\Users\\fb319a53-5e1e-477d-aba8-5e5196178e5aimages (1).jpg",
+      "SourceId": "Carea",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Carea Project\\New Repo For Carea\\Carea\\wwwroot\\",
+      "BasePath": "_content/Carea",
+      "RelativePath": "Uploads/Users/fb319a53-5e1e-477d-aba8-5e5196178e5aimages (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Users\\fb319a53-5e1e-477d-aba8-5e5196178e5aimages (1).jpg"
     }
   ]
 }

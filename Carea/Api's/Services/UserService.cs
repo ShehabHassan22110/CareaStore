@@ -336,6 +336,7 @@ namespace Carea.Services
             user.FullName = model.FullName;
             user.PhoneNumber = model.PhoneNumber;
             user.UserName = model.Email;
+            user.Nickname = model.NickName;
             user.PIN = model.PIN;
             user.Gender = model.Gender;
 
