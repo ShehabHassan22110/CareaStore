@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Carea.Controllers
 {
-    [Authorize(Roles = "Admin")]
 
     public class HomeController : Controller
     {
