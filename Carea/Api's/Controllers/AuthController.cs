@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Security.Policy;
 
 namespace Carea.Controllers
 {
@@ -194,7 +195,7 @@ namespace Carea.Controllers
                 var token = await _userManager.GeneratePasswordResetTokenAsync(user);
                 var passwordResetLink = Url.Action("ResetPassword","Account",new { Email = email,Token = token },Request.Scheme);
                 var messages = new EmailService.Message(new string[] { email },"Reset Password url ",passwordResetLink,attachments,token);
-                await _emailSender.SendEmailAsync2(messages,email,passwordResetLink,passwordResetLink);
+                await _emailSender.SendEmailAsync2(messages,email,$"<p>To reset your password <a href='{passwordResetLink}'>Click here</a></p>",passwordResetLink);
 
                 var Succesrespon = new UserManagerResponse {
 
