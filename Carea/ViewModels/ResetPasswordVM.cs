@@ -9,17 +9,23 @@ namespace Carea.ViewModels
 {
     public class ResetPasswordVM
     {
-        [Required(ErrorMessage = "This Field Required")]
-        [MinLength(6, ErrorMessage = "Min Len 6")]
+        public string Token { get; set; }
+
+        [Required(ErrorMessage = "Email Is Required")]
+        [EmailAddress(ErrorMessage = "You must Enter V alid Email")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Password required")]
+        [DataType(DataType.Password)]
+        [MinLength(3,ErrorMessage = "Min length 3")]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "This Field Required")]
-        [MinLength(6, ErrorMessage = "Min Len 6")]
-        [Compare("Password", ErrorMessage = "Password Not Match")]
+        [Required(ErrorMessage = "Password required")]
+        [DataType(DataType.Password)]
+        [MinLength(3,ErrorMessage = "Min length 3")]
+        [Compare("Password")]
+        [Display(Name = "confirm Password")]
         public string ConfirmPassword { get; set; }
-
-        public string Email { get; set; }
-        public string Token { get; set; }
 
 
     }

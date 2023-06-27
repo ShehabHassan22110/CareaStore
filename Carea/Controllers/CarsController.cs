@@ -9,6 +9,7 @@ using System;
 
 namespace Carea.Controllers
 {
+    [Authorize(Roles = "Admin")]
 
     public class CarsController : Controller
     {

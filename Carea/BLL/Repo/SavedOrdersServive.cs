@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Carea.BLL.Repo 
     {
-    public class CreateOrderServive : ICreateOrderServive
+    public class CreateOrderServive : ICreateOrderRep
     {
         private readonly ApplicationDbContext db;
 

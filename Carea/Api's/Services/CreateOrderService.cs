@@ -24,6 +24,7 @@ namespace Carea.Api_s.Services {
 			order.Amount = obj.Amount;
 			order.Address = obj.Address;
 			order.Status = obj.Status; 
+			order.Payment = obj.Payment; 
 
 			db.CreateOrder.Add(order);
 			db.SaveChanges();
@@ -53,7 +54,8 @@ namespace Carea.Api_s.Services {
 					Shipping = a.Shipping,
 					Amount = a.Amount,
 					Address= a.Address,
-                    Status = a.Status
+                    Status = a.Status,
+                    Payment = a.Payment
 
                 }); 
 
@@ -77,10 +79,11 @@ namespace Carea.Api_s.Services {
 				Shipping = a.Shipping,
 				Amount = a.Amount,
 				Address = a.Address,
-                Status=a.Status
+                Status=a.Status,
+				Payment = a.Payment
 
 
-            });
+                });
 			return data;
 
 		}
@@ -89,7 +92,8 @@ namespace Carea.Api_s.Services {
 			var data = db.CreateOrder.Include("Cars.Car_Photo_Color")
                 .Include("Cars.Brand")
                 .Include("Cars.Car_Rate")
-                .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.Status == Status).Select(a => new CreateOrderVM {
+               // .Include("Cars.Car_Rate.ApplicationUser").Where(a => a.Status == Status)
+			   .Select(a => new CreateOrderVM {
 				Id = a.Id,
 				ApplicationUserId = a.ApplicationUserId,
 				ApplicationUser = a.ApplicationUser,
@@ -100,8 +104,9 @@ namespace Carea.Api_s.Services {
 				Shipping = a.Shipping,
 				Amount = a.Amount,
 				Address = a.Address,
-				Status = a.Status
-			});
+				Status = a.Status,
+                Payment = a.Payment
+               });
 			return data;
 
 		}

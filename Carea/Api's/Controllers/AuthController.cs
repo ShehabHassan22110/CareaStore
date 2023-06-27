@@ -7,7 +7,6 @@ using Carea.Models;
 using Carea.Services.Interfaces;
 using EmailService;
 using Helper;
-using Microsoft.AspNet.Identity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -24,14 +23,15 @@ namespace Carea.Controllers
         private readonly IEmailSender _emailSender;
         private IConfiguration _configuration;
         private readonly IMailService _mailService;
-
-        public AuthController(IUserService userService, IEmailSender emailSender, IConfiguration configuration,IMailService mailService)
+        private readonly UserManager<ApplicationUser> _userManager;
+        public AuthController(IUserService userService, IEmailSender emailSender, IConfiguration configuration,IMailService mailService ,UserManager<ApplicationUser> userManager )
         {
 
             _userService = userService;
             _emailSender = emailSender;
             _configuration = configuration;
             _mailService = mailService;
+            _userManager = userManager;
         }
 
         [HttpPost("Register")]
@@ -82,19 +82,7 @@ namespace Carea.Controllers
         }
 
 
-        [HttpPost("ForgetPassword/{email}")]
-        public async Task<IActionResult> ForgetPassword(string email)
-        {
-            if (string.IsNullOrEmpty(email))
-                return NotFound();
-
-            var result = await _userService.ForgetPasswordAsync(email);
-
-            if (result.IsSuccess)
-                return Ok(result); // 200
-
-            return BadRequest(result); // 400
-        }
+       
 
         // api/auth/resetpassword
         [HttpPost("ResetPassword")]
@@ -190,6 +178,44 @@ namespace Carea.Controllers
 
 
         }
+
+
+        #region Forget  
+        [HttpPost("ForgetPassword/{email}")]
+        public async Task<IActionResult> ForgetPassword2( string email,IFormFileCollection attachments ) {
+            if (string.IsNullOrEmpty(email)) {
+
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user != null) {
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var passwordResetLink = Url.Action("ResetPassword","Account",new { Email = email,Token = token },Request.Scheme);
+                var messages = new EmailService.Message(new string[] { email },"Reset Password url ",passwordResetLink,attachments,token);
+                await _emailSender.SendEmailAsync2(messages,email,passwordResetLink,passwordResetLink);
+
+                var Succesrespon = new UserManagerResponse {
+
+                    IsSuccess = true,
+                    Message = "Reset password URL has been sent to the email successfully!",
+                    Token = token,
+                };
+
+                return Ok(Succesrespon);
+            }
+            var respon = new UserManagerResponse {
+                IsSuccess = false,
+                Message = "User Not Found!",
+            };
+
+            return BadRequest(respon); // 200
+
+
+        }
+
+        #endregion
 
 
     }

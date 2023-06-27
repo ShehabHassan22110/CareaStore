@@ -46,7 +46,7 @@ builder.Services.AddCors();
 builder.Services.AddRazorPages();
 
 
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+//builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
@@ -69,6 +69,7 @@ builder.Services.AddScoped<ICreateOrderService, CreateOrderService>();
 builder.Services.AddScoped<ICarRateRep, CarRateRep>();
 builder.Services.AddScoped<IOrderRequestRep, OrderRequestRep>();
 builder.Services.AddScoped<IShippingRep, ShippingRep>();
+builder.Services.AddScoped<ICreateOrderRep,CreateOrderRep>();
 builder.Services.AddScoped(typeof(IDynamicRep<>), typeof(DynamicRep<>));
 
 
@@ -102,6 +103,22 @@ builder.Services.AddAuthentication(options =>
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]))
                     };
                 });
+
+IdentityBuilder identityBuilder = builder.Services.AddIdentity<ApplicationUser,IdentityRole>(options => {
+
+    // Default Password settings.
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequiredUniqueChars = 0;
+}).AddEntityFrameworkStores<ApplicationDbContext>()
+      .AddTokenProvider<DataProtectorTokenProvider<ApplicationUser>>(TokenOptions.DefaultProvider);
+builder.Services.AddEndpointsApiExplorer();
+
+
+
 
 var app = builder.Build();
 

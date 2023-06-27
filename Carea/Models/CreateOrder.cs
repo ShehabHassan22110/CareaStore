@@ -14,12 +14,13 @@ namespace Carea.Models {
 			public int ShippingId { get; set; }
 			public virtual Shipping? Shipping { set; get; }
 			public string ApplicationUserId { get; set; }
-			public string? Status { get; set; } 
+			public int? Status { get; set; } 
 			public virtual ApplicationUser? ApplicationUser { set; get; }
 			public DateTime SevedDate { get; set; }
 			public double TAX { get; set; }
 			public string Address { get; set; }
 			public double Amount { get; set; }
+			public int Payment { get; set; }
 
 
 

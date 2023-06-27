@@ -1,5 +1,6 @@
 ﻿@using Carea.Extend
 @using Microsoft.AspNetCore.Identity;
+@inject SignInManager<ApplicationUser> signInManager
 
 
 @inject SignInManager<ApplicationUser> signInManager
@@ -200,10 +201,19 @@
                             </ul>
                         </li>
                         <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">
+
+						 @if (signInManager.IsSignedIn(User))
+                    {
+                        <div class="user-name">@User.Identity.Name</div>
+                    }                                    </span><span class="user-status">Available</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a><a class="dropdown-item" href="app-email.html"><i class="feather icon-mail"></i> My Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="feather icon-check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="feather icon-message-square"></i> Chats</a>
-                                <div class="dropdown-divider"></div><a class="dropdown-item" href="auth-login.html"><i class="feather icon-power"></i> Logout</a>
+                                <form asp-controller="Account" asp-action="LogOff" >
+                                    <input type="submit" class="dropdown-item btn-primary" value="Log Out" />
+
+                                </form>
+
                             </div>
                         </li>
                     </ul>
@@ -268,7 +278,11 @@
                 <div class="d-flex align-Models-center">
                     <div class="avatar mr-50"><img src="~/app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
                     <div class="search-data">
-                        <p class="search-data-title mb-0">John Doe</p><small class="text-muted">UI designer</small>
+                        <p class="search-data-title mb-0">
+                            @if (signInManager.IsSignedIn(User)) {
+                                <div class="user-name">@User.Identity.Name</div>
+                            }
+                        </p><small class="text-muted">UI designer</small>
                     </div>
                 </div>
             </a>

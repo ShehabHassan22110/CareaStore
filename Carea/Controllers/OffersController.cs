@@ -3,11 +3,14 @@ using Carea.BLL.Interface;
 using Carea.Models;
 using Carea.ViewModels;
 using Helper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Carea.Controllers
 	{
-	public class OffersController : Controller
+    [Authorize(Roles = "Admin")]
+
+    public class OffersController : Controller
 		{
 		private readonly IOffersRep _Ident;
 		private readonly IMapper mapper;

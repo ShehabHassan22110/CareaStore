@@ -20,7 +20,7 @@ namespace Carea.Controllers {
 
 		}
 
-		//[Authorize(Roles = "Admin")]
+		[Authorize(Roles = "Admin")]
 		#region Registration (Sign up)
 
 		[HttpGet]

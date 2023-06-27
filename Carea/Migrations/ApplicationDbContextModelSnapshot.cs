@@ -36,7 +36,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Complaints_Suggestions", (string)null);
+                    b.ToTable("Complaints_Suggestions");
                 });
 
             modelBuilder.Entity("Carea.Entities.PrivacyPolicy", b =>
@@ -53,7 +53,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PrivacyPolicy", (string)null);
+                    b.ToTable("PrivacyPolicy");
                 });
 
             modelBuilder.Entity("Carea.Entities.Terms_Conditions", b =>
@@ -70,7 +70,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Terms_Conditions", (string)null);
+                    b.ToTable("Terms_Conditions");
                 });
 
             modelBuilder.Entity("Carea.Extend.ApplicationUser", b =>
@@ -182,7 +182,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Brand", (string)null);
+                    b.ToTable("Brand");
                 });
 
             modelBuilder.Entity("Carea.Models.Car_Photo_Color", b =>
@@ -208,7 +208,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("Car_Id");
 
-                    b.ToTable("Car_Photo_Color", (string)null);
+                    b.ToTable("Car_Photo_Color");
                 });
 
             modelBuilder.Entity("Carea.Models.Car_Rate", b =>
@@ -242,7 +242,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Car_Rate", (string)null);
+                    b.ToTable("Car_Rate");
                 });
 
             modelBuilder.Entity("Carea.Models.Cars", b =>
@@ -323,7 +323,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("Brand_Id");
 
-                    b.ToTable("Cars", (string)null);
+                    b.ToTable("Cars");
                 });
 
             modelBuilder.Entity("Carea.Models.CreateOrder", b =>
@@ -348,14 +348,17 @@ namespace Carea.Migrations
                     b.Property<int>("CarsId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Payment")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("SevedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("ShippingId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Status")
+                        .HasColumnType("int");
 
                     b.Property<double>("TAX")
                         .HasColumnType("float");
@@ -368,7 +371,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("ShippingId");
 
-                    b.ToTable("CreateOrder", (string)null);
+                    b.ToTable("CreateOrder");
                 });
 
             modelBuilder.Entity("Carea.Models.Offers", b =>
@@ -397,7 +400,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.ToTable("Offers", (string)null);
+                    b.ToTable("Offers");
                 });
 
             modelBuilder.Entity("Carea.Models.OrderRequest", b =>
@@ -427,7 +430,7 @@ namespace Carea.Migrations
 
                     b.HasIndex("CarId");
 
-                    b.ToTable("OrderRequest", (string)null);
+                    b.ToTable("OrderRequest");
                 });
 
             modelBuilder.Entity("Carea.Models.Shipping", b =>
@@ -444,7 +447,7 @@ namespace Carea.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Shipping", (string)null);
+                    b.ToTable("Shipping");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

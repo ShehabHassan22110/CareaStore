@@ -21,7 +21,8 @@ namespace Carea.ViewModels {
 		public double TAX { get; set; }
 		public double Amount { get; set; }
 		public string Address { get; set; }
-		public string? Status { get; set; }
+		public int? Status { get; set; }
+		public int Payment { get; set; }
 
 
 

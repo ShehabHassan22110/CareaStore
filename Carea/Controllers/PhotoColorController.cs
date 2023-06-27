@@ -3,10 +3,13 @@ using Carea.BLL.Interface;
 using Carea.Models;
 using Carea.ViewModels;
 using Helper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Carea.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class PhotoColorController : Controller
     {
         private readonly ICar_Photo_ColorRep _Ident;

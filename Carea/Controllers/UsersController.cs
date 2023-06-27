@@ -1,11 +1,15 @@
 ﻿using Carea.Extend;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Carea.Controllers
 {
+    [Authorize(Roles = "Admin")]
+
     public class UsersController : Controller
     {
+
         #region ctor
         private readonly UserManager<ApplicationUser> userManager;
 

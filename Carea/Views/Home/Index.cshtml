@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> signInManager
+@{
     ViewData["Title"] = "Home Page !";
 }
 
@@ -21,8 +23,13 @@
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <h1 class="mb-2 text-white">Congratulations John,</h1>
-                                        <p class="m-auto w-75">You have done <strong>57.6%</strong> more sales today. Check your new badge in your profile.</p>
+                                <h1 class="mb-2 text-white">
+                                    Congratulations
+                                    @if (signInManager.IsSignedIn(User)) {
+                                        <div class="user-name">@User.Identity.Name</div>
+                                    }
+                                </h1>
+                                        <p class="m-auto w-75">Welcome to  <strong>Carea</strong> Dashboard Admin </p>
                                     </div>
                                 </div>
                             </div>

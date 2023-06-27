@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Carea.Controllers
 {
-   // [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
 
     public class Complaints_SuggestionsController : Controller
     {

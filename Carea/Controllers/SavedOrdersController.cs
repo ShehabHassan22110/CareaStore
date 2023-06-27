@@ -10,7 +10,7 @@ using Carea.Models;
 
 namespace Carea.BLL.Interface
 {
-    //[Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
 
     public class SavedOrdersController : Controller
     {

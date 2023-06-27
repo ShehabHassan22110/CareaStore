@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CreateOrderVM>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center>
+    <h1>Index Of Orders</h1>
+</center>
+
+<section id="basic-datatable">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">All Order Requests</h4>
+                </div>
+                <div class="card-content">
+                    <div class="card-body card-dashboard">
+                        <div class="table-responsive">
+                            <table class="table zero-configuration">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>User Name</th>
+                                        <th>Car Name</th>
+                                        <th>Car Model</th>
+
+                                        <th>Details</th>
+                                        <th>satues</th>
+                                        <th></th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model) {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.ApplicationUser.FullName</td>
+                                            <td>@item.Cars.Car_Name</td>
+                                            <td>@item.Cars.Car_Model</td>
+                                            <td><a asp-controller="OrderRequest" asp-action="Details" asp-route-id="@item.Id" class="btn btn-success">Details</a></td>
+                                            @if (item.Status == 0) {
+                                                <td><a asp-controller="OrderRequest" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Accept</a></td>
+                                                <td><a asp-controller="OrderRequest" asp-action="Reject" asp-route-id="@item.Id" class="btn btn-warning">Reject</a></td>
+
+                                            }
+
+                                            else if (item.Status == 1) {
+                                                <td>Accepted</td>
+                                                <td><a asp-controller="OrderRequest" asp-action="Reject" asp-route-id="@item.Id" class="btn btn-warning">Reject</a></td>
+
+                                            }
+                                            else if (item.Status == 2) {
+                                                <td>Rejected</td>
+                                                <td><a asp-controller="OrderRequest" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Accept</a></td>
+
+                                            }
+                                            <td><a asp-controller="OrderRequest" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></td>
+                                        </tr>
+                                    }
+                                <tfoot>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>User  Name</th>
+                                        <th>Car Name</th>
+                                        <th>Car Model</th>
+                                        <th>Details</th>
+                                        <th>satues</th>
+                                        <th></th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
