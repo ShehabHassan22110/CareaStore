@@ -10,7 +10,9 @@ namespace Carea.ViewModels {
             public string Title { get; set; }
             [JsonProperty("body")]
             public string Body { get; set; }
-        }
+
+        public int RequestId { get; set; }
+    }
 
         public class GoogleNotification {
             public class DataPayload {

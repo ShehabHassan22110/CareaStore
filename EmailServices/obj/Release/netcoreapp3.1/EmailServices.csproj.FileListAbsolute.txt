@@ -98,3 +98,13 @@ F:\Carea\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
 F:\Carea\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
 F:\Carea\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
 F:\Carea\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
+E:\Carea Project\Git hub Repo\Repo\EmailServices\bin\Release\netcoreapp3.1\EmailServices.deps.json
+E:\Carea Project\Git hub Repo\Repo\EmailServices\bin\Release\netcoreapp3.1\EmailServices.dll
+E:\Carea Project\Git hub Repo\Repo\EmailServices\bin\Release\netcoreapp3.1\EmailServices.pdb
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.AssemblyReference.cache
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.GeneratedMSBuildEditorConfig.editorconfig
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfoInputs.cache
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.AssemblyInfo.cs
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.csproj.CoreCompileInputs.cache
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.dll
+E:\Carea Project\Git hub Repo\Repo\EmailServices\obj\Release\netcoreapp3.1\EmailServices.pdb
