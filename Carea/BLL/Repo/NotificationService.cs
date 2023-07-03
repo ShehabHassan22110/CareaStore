@@ -37,7 +37,7 @@ namespace Carea.BLL.Repo {
 
                     GoogleNotification notification = new GoogleNotification();
                     notification.Data = dataPayload;
-                    notification.Notification = dataPayload;
+                    //notification.Notification = dataPayload;
 
                     var fcm = new FcmSender(settings,httpClient);
                     var fcmSendResponse = await fcm.SendAsync(deviceToken,notification);

@@ -1,8 +1,84 @@
-﻿
+﻿@model CreateOrderVM
+
 @{
     ViewData["Title"] = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<Center>
+	<h1>Edit Order Status of  @Model.Cars.Car_Name</h1>
+</Center>
 
+<form asp-action="Edit" asp-controller="CreateOrder" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="Name">RequestOrderId</label>
+		<input class="form-control" type="text" placeholder="Add Car Name Here .. " asp-for="RequestOrderId">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Car Name</label>
+		<input class="form-control" type="text" placeholder="Add Car Model Here .. " asp-for="Cars.Car_Name">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">ShippingId</label>
+		<input class="form-control" type="text" placeholder="Add Description Here .. " asp-for="ShippingId">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">TAX</label>
+		<input class="form-control" type="text" placeholder="Add Price Here .. " asp-for="TAX">
+		<br />
+
+	</div>
+
+	<div class="form-group">
+		<label for="Name">Amount</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Amount">
+		<br />
+
+	</div>	
+	<div class="form-group">
+		<label for="Name">Address</label>
+		<input class="form-control" type="text" placeholder="Add Rate Here .. " asp-for="Address">
+		<br />
+
+	</div>
+	
+	<div class="form-group">
+		<label for="Name">Payment</label>
+		<input class="form-control" type="number" placeholder="Add Rat	e Here .. " asp-for="Payment">
+		<br />
+
+	</div>
+	
+	<div class="form-group">
+		<label>Status</label>
+		<select asp-for="Status" class="form-control" >
+			<option value="1">Placed</option>
+			<option value="2">Processing</option>
+			<option value="3">Shipped</option>
+			<option value="4">In Transit</option>
+			<option value="5">Out for Delivery</option>
+			<option value="6">Delivered</option>
+			<option value="7">Cancelled</option>
+
+
+		</select>
+		<span asp-validation-for="Status" class="text-danger"></span>
+
+	</div>
+
+
+	<div class="col-12">
+		<button type="submit" class="btn btn-lg btn-primary">Save</button>
+		<button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+	</div>
+
+
+</form>

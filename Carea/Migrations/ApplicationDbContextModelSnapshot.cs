@@ -144,6 +144,9 @@ namespace Carea.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("device_id")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("imgUrl")
                         .HasColumnType("nvarchar(max)");
 

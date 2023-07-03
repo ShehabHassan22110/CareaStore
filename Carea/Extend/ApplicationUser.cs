@@ -17,6 +17,7 @@ namespace Carea.Extend
         public DateTime BirthDate { get; set; }
         public bool Gender { get; set; }
         public int PIN { get; set; }
+        public string? device_id { get; set; }
 
 
     }

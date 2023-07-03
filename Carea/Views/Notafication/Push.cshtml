@@ -1,0 +1,60 @@
+﻿@model NotificationModel
+@{
+    ViewData["Title"] = "Push";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Push</h1>
+
+<form asp-action="Push" asp-controller="Notafication" enctype="multipart/form-data">
+	<div class="form-group">
+		<label for="Name">DeviceId</label>
+		<input class="form-control" type="text" placeholder="Add Brand Name Here .. " asp-for="DeviceId">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Name">Title</label>
+		<input class="form-control" type="text" placeholder="Add Phone Here .. " asp-for="Title">
+		<br />
+
+	</div>
+	<div class="form-group">
+		<label for="Photo">Body</label>
+		<input type="text" class="form-control" asp-for="Body">
+	</div>
+	<div class="col-12">
+		<button id="sub" type="submit" class="btn btn-lg btn-primary">Save</button>
+		<button type="reset" class="btn btn-danger btn-lg">Cancel</button>
+	</div>
+
+
+</form>
+
+
+<script>
+	$("#sub").click(() => {
+		let obj =
+		{
+			deviceId: "string",
+			isAndroiodDevice: true,
+			title: "string",
+			body: "string"
+		}
+		{
+			decviceID: $(""),
+			title: 'sdsd',
+			body: 'asdasdasd'
+		}
+		$.ajax({
+			method: 'POST'
+			url: '/api/NotificationApi/send',
+			data: obj,
+			success: function (res) {
+				console.log('Done');
+			}
+		})
+
+	})
+
+</script>

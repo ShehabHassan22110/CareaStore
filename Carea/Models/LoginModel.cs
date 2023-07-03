@@ -10,5 +10,7 @@ namespace Carea.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
+        public string? device_id { get; set; }
+
     }
 }

@@ -19,17 +19,31 @@ namespace Carea.Controllers
         }
         #endregion
 
-
+            
         #region Index
         public IActionResult Index()
         {
             var users = userManager.Users;
             return View(users);
         }
+		#endregion
+
+		#region IndexOfAdmins
+		public async Task<IActionResult> IndexOfAdmins() {
+			var users =await userManager.GetUsersInRoleAsync("Admin");
+			return View(users);
+		}
         #endregion
 
-        #region Details
-        public async Task<IActionResult> Details(string id)
+        #region IndexOfUsers
+        public async Task<IActionResult> IndexOfUsers() {
+			var users = await userManager.GetUsersInRoleAsync("User");
+			return View(users);
+		}
+		#endregion
+
+		#region Details
+		public async Task<IActionResult> Details(string id)
         {
             var data = await userManager.FindByIdAsync(id);
            // var result = userManager.GetUserAsync(data);
