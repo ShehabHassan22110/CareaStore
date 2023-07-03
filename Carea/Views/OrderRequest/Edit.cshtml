@@ -52,11 +52,23 @@
 		<br />
 	</div>
 
+	<input hidden class="form-control" type="text" placeholder="Add Brand Name Here .. "
+		   value="daBkZ98fT0iLzssohRrEov:APA91bHv6leXSVd3wzEnPRp5965IsBNni87dSfINAOct3XUg-ypP7IIDgJXeQW4IeG31xNwhukoWl5Rn53PTNxaJe5uXrbOMgneXpR5RKkfbMup9HV-K2Dw5B27fkbZUOD6JpjqXdFuQ"
+	id="DeviceId">
+
+	<input hidden class="form-control" type="text" placeholder="Add Phone Here .. " value="Test Title Order Request New" id="Title">
+
+	<input hidden type="text" class="form-control" value="Test Body Order Request New" id="Body">
+
 
 	<div class="col-12">
-		<input type="submit" value="Accept Request " class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1" />
+		<input id="sub" type="submit" value="Accept Request " class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1" />
 		<a asp-action="Delete" asp-controller="OrderRequest" class="btn btn-danger btn-lg">Delete</a>
 	</div>
 
 
 </form>
+@section scripts{
+	<script src="~/js/push.js"></script>
+
+}

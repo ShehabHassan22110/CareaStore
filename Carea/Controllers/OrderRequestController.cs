@@ -12,17 +12,20 @@ namespace Carea.Controllers
 
     public class OrderRequestController : Controller
     {
-        private readonly IOrderRequestRep _Ident;
+		private readonly INotificationService _notificationService;
+		private readonly IOrderRequestRep _Ident;
         //private readonly ICreateOrderServive _orders;
         private readonly IMapper mapper;
 
-        public OrderRequestController(IMapper mapper, IOrderRequestRep ident)
+        public OrderRequestController(IMapper mapper, IOrderRequestRep ident,INotificationService notificationService )
         {
             this.mapper = mapper;
             this._Ident = ident;
-        }
+			_notificationService = notificationService;
 
-        public IActionResult Index()
+		}
+
+		public IActionResult Index()
         {
             var data = _Ident.Get();
             var result = mapper.Map<IEnumerable<OrderRequestVM>>(data);
@@ -79,22 +82,28 @@ namespace Carea.Controllers
             return View(result);
         }
         [HttpPost]
-        public IActionResult Edit(OrderRequestVM model)
+        public async Task<IActionResult> Edit(OrderRequestVM model)
 
         {
             var olddata = _Ident.GetById(model.Id);
             olddata.Statues = 1;
 
+            NotificationModel notificationModel = new NotificationModel {
+                DeviceId= "daBkZ98fT0iLzssohRrEov:APA91bHv6leXSVd3wzEnPRp5965IsBNni87dSfINAOct3XUg-ypP7IIDgJXeQW4IeG31xNwhukoWl5Rn53PTNxaJe5uXrbOMgneXpR5RKkfbMup9HV-K2Dw5B27fkbZUOD6JpjqXdFuQ",
+				Title = "title order request",
+                Body = "Body Test  order request"
+			};
 
-
-            CreateOrderVM orderObj = new CreateOrderVM
+			CreateOrderVM orderObj = new CreateOrderVM
             {
                 CarsId= olddata.CarId,
                 ApplicationUser= model.ApplicationUser,
             };
 
                 _Ident.Edit(olddata);
-                return RedirectToAction("Index");
+			var result = await _notificationService.SendNotification(notificationModel);
+
+			return RedirectToAction("Index");
 
         } 
         [HttpGet]

@@ -56,7 +56,10 @@ namespace Carea.Services
                    PhoneNumber=model.PhoneNumber,
                    BirthDate = model.BirthDate,
                    Gender = model.Gender,
-                   PIN = model.PIN
+                   PIN = model.PIN,
+                   device_id = model.device_id
+                   
+                   
 
                };
 
@@ -140,6 +143,7 @@ namespace Carea.Services
             var claims = new[]
             {
                 new Claim("Id", user.Id),
+                new Claim("DeviceId", user.device_id),
                 new Claim("FullName", user.FullName),
                 new Claim("NickName", user.Nickname),
                 new Claim("Email", model.Email),
@@ -148,6 +152,7 @@ namespace Carea.Services
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
                 new Claim("imgurl",$"{user.imgUrl}"),
+
 
 
             };

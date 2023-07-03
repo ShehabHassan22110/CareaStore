@@ -29,7 +29,9 @@ namespace Carea.Models
 
         [Required]
         public int PIN { get; set; }
+		public string? device_id { get; set; }
 
 
-    }
+
+	}
 }

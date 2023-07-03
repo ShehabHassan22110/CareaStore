@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UTNaYZYgMjHBi72cJPv4Udx5KjzEQf7pTWaRQj2JGDA=",
+  "Hash": "4zZ20/MbfBoixdqynXXKMkzQTO3vSjmoxMa6Ai8Uidc=",
   "Source": "Carea",
   "BasePath": "_content/Carea",
   "Mode": "Default",
@@ -46036,12 +46036,12 @@
       "OriginalItemSpec": "wwwroot\\html\\rtl\\vertical-menu-template-semi-dark\\table-datatable.html"
     },
     {
-      "Identity": "F:\\Carea\\Carea\\wwwroot\\js\\site.js",
+      "Identity": "F:\\Carea\\Carea\\wwwroot\\js\\push.js",
       "SourceId": "Carea",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\Carea\\Carea\\wwwroot\\",
       "BasePath": "_content/Carea",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/push.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -46050,7 +46050,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\push.js"
     },
     {
       "Identity": "F:\\Carea\\Carea\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
