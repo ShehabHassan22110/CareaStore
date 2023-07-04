@@ -13,7 +13,9 @@ namespace Carea.BLL.Repo {
 			return All;
 		}
 		public CreateOrder GetById( int id ) {
-			var data = db.CreateOrder.Where(x => x.Id == id).Include("Cars").FirstOrDefault();
+			var data = db.CreateOrder.Where(x => x.Id == id).Include("Cars")
+                .Include("ApplicationUser")
+                .Include("Shipping").FirstOrDefault();
 			return data;
 		}
 

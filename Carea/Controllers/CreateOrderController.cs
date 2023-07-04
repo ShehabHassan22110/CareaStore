@@ -69,19 +69,12 @@ namespace Carea.Controllers {
 		}
 		[HttpPost]
 		public IActionResult Edit( CreateOrderVM model ) {
-			var olddata = _Ident.GetById(model.Id);
-			olddata.Status = 1;
+
+            var data = mapper.Map<CreateOrder>(model);
 
 
-
-			CreateOrderVM orderObj = new CreateOrderVM {
-				CarsId = olddata.CarsId,
-				ApplicationUser = model.ApplicationUser,
-			};
-
-			_Ident.Edit(olddata);
+            _Ident.Edit(data);
 			return RedirectToAction("Index");
-
 		}
 		[HttpGet]
 		public IActionResult receive( int id ) {

@@ -1,8 +1,147 @@
-﻿
+﻿@model CreateOrderVM;
 @{
     ViewData["Title"] = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Delete</h1>
+
+<section class="">
+    <div class="">
+
+        <h2>Delete Order </h2>
+
+        <form asp-controller="CreateOrder" asp-action="Delete" class="form-group ">
+
+            <div asp-validation-summary="All;" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id" class="form-control" />
+
+            <label>Car Name </label>
+            <input type="Text" asp-for="Cars.Car_Name" disabled class="form-control" />
+            <br />
+            <br />
+
+            <label>Car Model</label>
+            <input type="Text" asp-for="Cars.Car_Model" disabled class="form-control" />
+            <br />
+            <br />
+
+
+
+
+            <label>User Full name </label>
+            <input type="Text" asp-for="ApplicationUser.FullName" disabled class="form-control" />
+            <br />
+            <br />
+
+            <label>Shipping Type</label>
+            <input type="Text" asp-for="Shipping.Type" disabled class="form-control" />
+            <br />
+            <br />
+
+            <label>TAX</label>
+            <input type="Text" asp-for="TAX" disabled class="form-control" />
+            <br />
+            <br />
+            <label>Amount</label>
+            <input type="Text" asp-for="Amount" disabled class="form-control" />
+            <br />
+            <br />   
+            <label>Address</label>
+            <input type="Text" asp-for="Address" disabled class="form-control" />
+            <br />
+            <br />
+
+
+
+			@if (Model.Status == 1)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Placed">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 2)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Processing">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 3)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Shipped">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 4)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="In Transit">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 5)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Out for Delivery">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 6)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Delivered">
+					<br />
+
+				</div>
+
+			}
+			@if (Model.Status == 7)
+			{
+
+				<div class="form-group">
+					<label for="Name">Statues</label>
+					<input disabled class="form-control" type="text" value="Cancelled">
+					<br />
+
+				</div>
+
+			}
+
+
+            <center>
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </center>
+            <br />
+            <br />
+        </form>
+        <center>
+            <a asp-controller="CreateOrder" asp-action="Index" class="btn btn-success">Back</a>
+        </center>
+    </div>
+</section>
 

@@ -49,22 +49,16 @@
 		<input class="form-control" type="text" asp-for="Cars.Car_Model" readonly>
 		<br />
 	</div>
-	<input hidden class="form-control" type="text" placeholder="Add Brand Name Here .. "
-		   value="@Model.ApplicationUser.device_id"
-	id="DeviceId">
+	<input hidden class="form-control" type="text" value="@Model.ApplicationUser.device_id"	id="DeviceId">
 
-	<input hidden class="form-control" type="text" placeholder="Add Phone Here .. " value="Order Request" id="Title">
-
+	<input hidden class="form-control" type="text" value="Order Request" id="Title">
 	<input hidden type="text" class="form-control" value="Your Order Request Has benn Rejected." id="Body">
 	<input hidden type="text" class="form-control" value="@Model.Id" id="OrderRequestId">
 
-
 	<div class="col-12">
-		<input type="submit" value="Reject Request " class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1" />
+		<input type="submit" value="Reject Request" class="btn btn-primary glow mb-1 mb-sm-0 mr-0 mr-sm-1" />
 		<a asp-action="Delete" asp-controller="OrderRequest" class="btn btn-danger btn-lg">Delete</a>
 	</div>
-
-
 </form>
 @section scripts{
 	<script src="~/js/push.js"></script>
