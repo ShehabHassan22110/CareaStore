@@ -8,10 +8,8 @@ namespace Carea.Models
     {
         [Key]
         public int Id { get; set; }
-
         public double OfferdPrice { get; set; }
         public int? Statues { get; set; }
-
         public string ApplicationUserId { get; set; }
         [ForeignKey("ApplicationUserId")]
         public ApplicationUser? ApplicationUser { get; set; }

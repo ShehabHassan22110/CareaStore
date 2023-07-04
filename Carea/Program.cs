@@ -42,7 +42,6 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 
 builder.Services.AddSingleton(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
 //builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddCors();
 builder.Services.AddRazorPages();
 
 
@@ -71,9 +70,18 @@ builder.Services.AddScoped<IOrderRequestRep, OrderRequestRep>();
 builder.Services.AddScoped<IShippingRep, ShippingRep>();
 builder.Services.AddScoped<ICreateOrderRep,CreateOrderRep>();
 builder.Services.AddScoped(typeof(IDynamicRep<>), typeof(DynamicRep<>));
+//------------Api Cors ------------
+builder.Services.AddCors();
+builder.Services.AddCors(options => {
+	options.AddPolicy(name: "AllowOrigin",
+		builder => {
+			builder.WithOrigins("https://localhost:44363/","https://car-price-prediction-e99b.onrender.com/predict")
+								.AllowAnyHeader()
+								.AllowAnyMethod();
+		});
+});
 
-
-
+//---------------------------------------------
 //Api Interfaces
 builder.Services.AddTransient<ICarsApiRep, CarsApiRep>();
 builder.Services.AddTransient<IBrandApiRep, BrandApiRep>();
@@ -137,6 +145,13 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 });
 
+app.UseCors(builder => {
+	builder
+	.AllowAnyOrigin()
+	.AllowAnyMethod()
+	.AllowAnyHeader();
+});
+app.UseCors("AllowOrigin");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

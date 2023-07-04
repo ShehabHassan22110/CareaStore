@@ -8,8 +8,6 @@ namespace Carea.Models
         public string imgUrl { get; set; }
         public string Color_Code { get; set; }
 
-
-
         //Cars Relation
         public int Car_Id { get; set; }
         [ForeignKey("Car_Id")]

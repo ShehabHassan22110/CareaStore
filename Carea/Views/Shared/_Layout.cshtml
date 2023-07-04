@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/extensions/tether-theme-arrows.css">
     <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/extensions/tether.min.css">
     <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/extensions/shepherd-theme-default.css">
+    <link rel="stylesheet" type="text/css" href="~/app-assets/vendors/css/extensions/swiper.min.css">
+
     <!-- END: Vendor CSS-->
     <!-- BEGIN: Theme CSS-->
     <link rel="stylesheet" type="text/css" href="~/app-assets/css/bootstrap.css">
@@ -391,6 +393,12 @@
                         <span class="menu-title" data-i18n="Table">Brands</span>
                     </a>
                 </li>
+                 <li class=" nav-Model">
+                    <a asp-action="Prediction" asp-controller="Cars">
+                        <i class="feather icon-zap"></i>
+                        <span class="menu-title" data-i18n="Table">Prediction</span>
+                    </a>
+                </li>
                 <li class=" nav-Model">
                     <a asp-action="Index" asp-controller="Cars">
                         <i class="feather icon-server"></i>
@@ -408,6 +416,12 @@
                     <a asp-action="Index" asp-controller="CreateOrder">
                         <i class="feather icon-shopping-cart"></i>
                     <span class="menu-title" data-i18n="Table">Orders</span>
+                    </a>
+                </li>
+                <li class=" nav-Model">
+                    <a asp-action="Index" asp-controller="OrderRequest">
+                        <i class="feather icon-shopping-cart"></i>
+                        <span class="menu-title" data-i18n="Table">Order Request</span>
                     </a>
                 </li>
                 <li class=" navigation-header">
@@ -478,6 +492,8 @@
     <script src="~/app-assets/js/core/app-menu.js"></script>
     <script src="~/app-assets/js/core/app.js"></script>
     <script src="~/app-assets/js/scripts/components.js"></script>
+    <script src="~/app-assets/vendors/js/extensions/swiper.min.js"></script>
+
     <!-- END: Theme JS-->
     <!-- BEGIN: Page JS-->
         <script src="~/app-assets/js/scripts/pages/dashboard-analytics.js"></script>

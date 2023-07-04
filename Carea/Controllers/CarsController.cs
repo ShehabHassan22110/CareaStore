@@ -39,15 +39,7 @@ namespace Carea.Controllers
 
         public IActionResult Create()
         {
-            //< div class="col-12">    
-            //                    <div class="form-group">
-            //                        <label>Car Brand</label>
-            //                        <select asp-for="Brand_Id" class="form-control" asp-items="(SelectList)ViewBag.BrandList">
-            //                        </select>
-            //                        <span asp-validation-for="Brand_Id" class="text-danger"></span>
-            //                   </div>
-            //                </div>
-
+           
             var brands = _brand.Get();
             ViewBag.BrandList = new SelectList(brands, "Id", "BrandName");
             return View();
@@ -113,7 +105,12 @@ namespace Carea.Controllers
             var result = mapper.Map<CarsVM>(data);
             return View(result);
         }
-       
+
+        public IActionResult prediction() {
+
+            return View();
+        }
+
     }
 
 }

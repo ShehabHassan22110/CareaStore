@@ -10,8 +10,6 @@ namespace Carea.Models
         [ForeignKey("UserId")]
         public ApplicationUser? ApplicationUser { get; set; }
         public double Rate { get; set; }
-      
-
         public string Comment { get; set; }
         public int CarId { get; set; }
         public DateTime RateTime { get; set; } = DateTime.Now;

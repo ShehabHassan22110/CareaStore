@@ -8,8 +8,7 @@ namespace Carea.Models
         public int Discount { get; set; }
         public string Description { get; set; }
         public string Title { get; set; }
-		public int CarId { get; set; }
-		
+		public int CarId { get; set; }		
 		[ForeignKey("CarId")]
 		public Cars? Cars { get; set; }
 	}

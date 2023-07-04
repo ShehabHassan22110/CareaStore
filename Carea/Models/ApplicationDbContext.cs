@@ -1,16 +1,13 @@
 ﻿using Carea.Entities;
 using Carea.Extend;
-
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
 namespace Carea.Models
 {
     public class ApplicationDbContext:IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions options):base(options)
         {
-
         }
         public DbSet<Cars> Cars { get; set; }
         public DbSet<Brand> Brand { get; set; }
@@ -23,7 +20,5 @@ namespace Carea.Models
 		public virtual DbSet<Complaints_Suggestions> Complaints_Suggestions { set; get; }
 		public virtual DbSet<Terms_Conditions> Terms_Conditions { set; get; }
 		public virtual DbSet<PrivacyPolicy> PrivacyPolicy { set; get; }
-
-
 	}
 }

@@ -1,12 +1,10 @@
 ﻿using Carea.Extend;
-
 namespace Carea.Models {
 	public class CreateOrder
 		{
 			public CreateOrder()
 			{
 				SevedDate = DateTime.Now;
-
 			}
 			public int Id { get; set; }
 			public int CarsId { get; set; }
@@ -21,13 +19,5 @@ namespace Carea.Models {
 			public string Address { get; set; }
 			public double Amount { get; set; }
 			public int Payment { get; set; }
-
-
-
-
-
-
-		
-
 	}
 }

@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
-
 namespace Carea.Models
 {
     public class Cars
-    {
-      
+    {      
         public int Id { get; set; }
         public string Car_Name { get; set; }
         public string Car_Model { get; set; }
