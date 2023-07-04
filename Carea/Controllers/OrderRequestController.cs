@@ -1,29 +1,38 @@
 ﻿using AutoMapper;
 using Carea.BLL.Interface;
+using Carea.Extend;
 using Carea.Models;
 using Carea.ViewModels;
 using Helper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 namespace Carea.Controllers
 {
     [Authorize(Roles = "Admin")]
 
     public class OrderRequestController : Controller
     {
-		private readonly INotificationService _notificationService;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly INotificationService _notificationService;
 		private readonly IOrderRequestRep _Ident;
+        private readonly IConfiguration _configuration;
+
         //private readonly ICreateOrderServive _orders;
         private readonly IMapper mapper;
 
-        public OrderRequestController(IMapper mapper, IOrderRequestRep ident,INotificationService notificationService )
+        public OrderRequestController(IConfiguration configuration, UserManager<ApplicationUser> userManager, IMapper mapper, IOrderRequestRep ident,INotificationService notificationService )
         {
             this.mapper = mapper;
             this._Ident = ident;
 			_notificationService = notificationService;
-
-		}
+            userManager = userManager;
+            _configuration = configuration;
+        }
 
 		public IActionResult Index()
         {
@@ -32,8 +41,6 @@ namespace Carea.Controllers
             return View(result);
 
         }
-
-
 
         [HttpGet]
 
@@ -77,14 +84,22 @@ namespace Carea.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+
             var data = _Ident.GetById(id);
             var result = mapper.Map<OrderRequestVM>(data);
+
+
+
+
             return View(result);
         }
         [HttpPost]
         public async Task<IActionResult> Edit(OrderRequestVM model)
 
         {
+
+
+
             var olddata = _Ident.GetById(model.Id);
             olddata.Statues = 1;
 
@@ -101,7 +116,7 @@ namespace Carea.Controllers
             };
 
                 _Ident.Edit(olddata);
-			var result = await _notificationService.SendNotification(notificationModel);
+		//	var result = await _notificationService.SendNotification(notificationModel);
 
 			return RedirectToAction("Index");
 

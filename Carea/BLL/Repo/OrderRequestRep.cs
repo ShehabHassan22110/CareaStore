@@ -18,7 +18,7 @@ namespace Carea.BLL.Repo
         }
         public OrderRequest GetById(int id)
         {
-            var data = db.OrderRequest.Where(x => x.Id == id).Include("Cars").FirstOrDefault();
+            var data = db.OrderRequest.Where(x => x.Id == id).Include("Cars").Include("ApplicationUser").FirstOrDefault();
             return data;
         }
 

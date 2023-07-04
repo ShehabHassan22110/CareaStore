@@ -46,7 +46,6 @@ namespace Carea.Controllers
 		public async Task<IActionResult> Details(string id)
         {
             var data = await userManager.FindByIdAsync(id);
-           // var result = userManager.GetUserAsync(data);
             return View(data);
         }
         #endregion
