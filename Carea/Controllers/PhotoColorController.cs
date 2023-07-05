@@ -55,11 +55,7 @@ namespace Carea.Controllers
 
             _Ident.Creat(model);
                 return RedirectToAction("Index");
-            //}
-            //catch (Exception ex)
-            //{
-            //    return View();
-            //}
+
         }
 
         [HttpGet]

@@ -7,8 +7,10 @@
 
 <section class="">
     <div class="">
+		<center>
+			<h2>Delete Order </h2>
 
-        <h2>Delete Order </h2>
+		</center>
 
         <form asp-controller="CreateOrder" asp-action="Delete" class="form-group ">
 
@@ -132,16 +134,14 @@
 
 			}
 
+			<div class="col-12">
+				<input type="submit" value="Delete" class="btn btn-danger" />
+				<a asp-controller="CreateOrder" asp-action="Index" class="btn btn-success">Back</a>
+			</div>
 
-            <center>
-                <input type="submit" value="Delete" class="btn btn-danger" />
-            </center>
-            <br />
-            <br />
         </form>
-        <center>
-            <a asp-controller="CreateOrder" asp-action="Index" class="btn btn-success">Back</a>
-        </center>
+
+
     </div>
 </section>
 

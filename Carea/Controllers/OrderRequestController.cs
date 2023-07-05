@@ -97,9 +97,6 @@ namespace Carea.Controllers
         public async Task<IActionResult> Edit(OrderRequestVM model)
 
         {
-
-
-
             var olddata = _Ident.GetById(model.Id);
             olddata.Statues = 1;
 

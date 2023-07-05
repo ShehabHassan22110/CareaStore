@@ -32,7 +32,6 @@ namespace Carea.Controllers {
 		public async Task<IActionResult> Registration(RegisterModel model ) {
 
 			if (ModelState.IsValid) {
-
 				var user = new ApplicationUser() {
 					UserName = model.Email,
 					FullName = model.FullName,
@@ -41,9 +40,7 @@ namespace Carea.Controllers {
 					BirthDate = model.BirthDate,
                     Gender = true,
 				};
-
 				var result = await userManager.CreateAsync(user,model.Password);
-
 				if (result.Succeeded) {
 					var defaultrole = _roleManager.FindByNameAsync("Admin").Result;
 
@@ -57,10 +54,6 @@ namespace Carea.Controllers {
 						ModelState.AddModelError("",item.Description);
 					}
 				}
-
-
-
-
 				return View(model);
 
 			}

@@ -62,16 +62,11 @@ namespace Carea.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(ApplicationUser model)
         {
-
             try
             {
-
-
-                if (ModelState.IsValid)
+             if (ModelState.IsValid)
                 {
-
                     var user = await userManager.FindByIdAsync(model.Id);
-
                     user.UserName = model.Email;
                     user.FullName = model.FullName;
                     user.Nickname = model.Nickname;
@@ -79,9 +74,7 @@ namespace Carea.Controllers
                     user.BirthDate = model.BirthDate;
                     user.Gender = model.Gender;
                     user.PIN = model.PIN;
-
                     var result = await userManager.UpdateAsync(user);
-
                     if (result.Succeeded)
                     {
                         return RedirectToAction("Index");
