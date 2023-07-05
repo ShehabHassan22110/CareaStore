@@ -1,0 +1,55 @@
+﻿@model OrderRequestVM;
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="">
+    <div class="">
+
+        <h2>Delete Order Request  </h2>
+
+        <form asp-controller="OrderRequest" asp-action="Delete" class="form-group ">
+
+            <div asp-validation-summary="All;" class="text-danger"></div>
+
+            <input type="hidden" asp-for="Id"  class="form-control" />
+
+            <label>Car Name </label>
+            <input type="Text" asp-for="Cars.Car_Name" disabled class="form-control" />
+            <br />
+            <br />
+
+            <label>Car Model</label>
+            <input type="Text" asp-for="Cars.Car_Model" disabled class="form-control" />
+            <br />
+            <br />
+
+
+
+ 
+            <label>User Full name </label>
+            <input type="Text" asp-for="ApplicationUser.FullName" disabled class="form-control" />
+            <br />
+            <br />
+
+            <label>Request Statues</label>
+            <input type="Text" asp-for="Statues" disabled class="form-control" />
+            <br />
+            <br />
+
+          
+            
+            <center>
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </center>
+            <br />
+            <br />
+        </form>
+        <center>
+            <a asp-controller="OrderRequest" asp-action="Index" class="btn btn-success">Back</a>
+        </center>
+    </div>
+</section>
+
