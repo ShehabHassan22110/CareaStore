@@ -2538,3 +2538,12 @@ E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\System.Web.Optimizat
 E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\Microsoft.Web.Infrastructure.dll
 E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\WebGrease.dll
 E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\ru-ru\BundleTransformer.Core.resources.dll
+F:\Carea\Carea\bin\Release\net6.0\AdvancedStringBuilder.dll
+F:\Carea\Carea\bin\Release\net6.0\AjaxMin.dll
+F:\Carea\Carea\bin\Release\net6.0\Antlr3.Runtime.dll
+F:\Carea\Carea\bin\Release\net6.0\BundleTransformer.Core.dll
+F:\Carea\Carea\bin\Release\net6.0\BundleTransformer.MicrosoftAjax.dll
+F:\Carea\Carea\bin\Release\net6.0\System.Web.Optimization.dll
+F:\Carea\Carea\bin\Release\net6.0\Microsoft.Web.Infrastructure.dll
+F:\Carea\Carea\bin\Release\net6.0\WebGrease.dll
+F:\Carea\Carea\bin\Release\net6.0\ru-RU\BundleTransformer.Core.resources.dll
