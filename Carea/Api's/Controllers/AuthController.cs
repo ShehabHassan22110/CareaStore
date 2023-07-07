@@ -34,63 +34,49 @@ namespace Carea.Controllers
             _mailService = mailService;
             _userManager = userManager;
         }
-
+        #region Register
         [HttpPost("Register")]
-        public async Task<IActionResult> RegisterAsync([FromBody] RegisterModel model)
-        {
-            if (ModelState.IsValid)
-            {
+        public async Task<IActionResult> RegisterAsync( [FromBody] RegisterModel model ) {
+            if (ModelState.IsValid) {
                 var result = await _userService.RegisterUserAsync(model);
-                if (result.IsSuccess)
-                {
-                    await _mailService.SendEmailAsync(model.Email, "New Register", "<h1>Hey!, Thank You to Register in our App </h1><p>New Register at " + DateTime.Now + "</p>");
+                if (result.IsSuccess) {
+                    await _mailService.SendEmailAsync(model.Email,"New Register","<h1>Hey!, Thank You to Register in our App </h1><p>New Register at " + DateTime.Now + "</p>");
                     return Ok(result);
-                    
-  
-
                 }
                 return BadRequest(result);
             }
             return BadRequest("Some Inputs are not valid !"); // status code 400
         }
+        #endregion
 
-
-        // /api/auth/login
+        #region Login 
         [HttpPost("Login")]
-        public async Task<IActionResult> LoginAsync([FromBody] LoginModel model)
-        {
-            if (ModelState.IsValid)
-            {
+        public async Task<IActionResult> LoginAsync( [FromBody] LoginModel model ) {
+            if (ModelState.IsValid) {
                 var result = await _userService.LoginUserAsync(model);
 
-                if (result.IsSuccess)
-                {
-                    await _mailService.SendEmailAsync(model.Email, "New login", "<h1>Hey!, new login to your account noticed</h1><p>New login to your account at " + DateTime.Now + "</p>");
+                if (result.IsSuccess) {
+                    await _mailService.SendEmailAsync(model.Email,"New login","<h1>Hey!, new login to your account noticed</h1><p>New login to your account at " + DateTime.Now + "</p>");
                     return Ok(result);
-     
+
                 }
-                
+
                 return BadRequest(result);
             }
 
-         
+
             return BadRequest("Some properties are not valid");
         }
 
-        private string CreateToken(ClaimsPrincipal user)
-        {
+        private string CreateToken( ClaimsPrincipal user ) {
             throw new NotImplementedException();
         }
+        #endregion
 
-
-       
-
-        // api/auth/resetpassword
+        #region Reset Password
         [HttpPost("ResetPassword")]
-        public async Task<IActionResult> ResetPassword([FromForm] ResetPasswordViewModel model )
-        {
-            if (ModelState.IsValid)
-            {
+        public async Task<IActionResult> ResetPassword( [FromForm] ResetPasswordViewModel model ) {
+            if (ModelState.IsValid) {
                 var result = await _userService.ResetPasswordAsync(model);
 
                 if (result.IsSuccess)
@@ -101,19 +87,15 @@ namespace Carea.Controllers
 
             return BadRequest("Some properties are not valid");
         }
+        #endregion
 
-
-
+        #region Get Account Data
         [HttpPost("GetAccountData/{id}")]
-        public async Task<IActionResult> GetUser(string id)
-        {
+        public async Task<IActionResult> GetUser( string id ) {
             var data = _userService.GetAccount(id);
 
-            if (data != null)
-            {
-                UserAccountCustomRespons Cusotm = new UserAccountCustomRespons()
-
-                {
+            if (data != null) {
+                UserAccountCustomRespons Cusotm = new UserAccountCustomRespons() {
                     Record = await data,
                     Code = "200",
                     Message = "Data Returned",
@@ -123,8 +105,7 @@ namespace Carea.Controllers
                 return Ok(Cusotm);
 
             }
-            CustomResponse customResponse = new CustomResponse()
-            {
+            CustomResponse customResponse = new CustomResponse() {
                 Code = "400",
                 Message = "There Is No User With This Id",
                 Status = "Faild"
@@ -132,20 +113,17 @@ namespace Carea.Controllers
             return Ok(customResponse);
 
         }
+        #endregion
 
-
+        #region Edit Account
         [HttpPost("EditeAccount/{id}")]
-        public async Task<IActionResult> EditeAccount(string id, [FromForm] EditeProfileModel model)
-        {
+        public async Task<IActionResult> EditeAccount( string id,[FromForm] EditeProfileModel model ) {
 
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid) {
                 model.Id = id;
                 var data = await _userService.EditeProffile(model);
 
-                if (data.IsSuccess)
-
-                {
+                if (data.IsSuccess) {
                     return Ok(data);
                 }
 
@@ -157,18 +135,16 @@ namespace Carea.Controllers
 
         }
 
+        #endregion
 
+        #region Edit Password 
         [HttpPost("EditePassword")]
-        public async Task<IActionResult> EditePassword( [FromBody] EditePassword model)
-        {
+        public async Task<IActionResult> EditePassword( [FromBody] EditePassword model ) {
 
-            if (ModelState.IsValid)
-            {
+            if (ModelState.IsValid) {
                 var data = await _userService.EditePassword(model);
 
-                if (data.IsSuccess)
-
-                {
+                if (data.IsSuccess) {
                     return Ok(data);
                 }
 
@@ -179,16 +155,15 @@ namespace Carea.Controllers
 
 
         }
+        #endregion
 
-
-        #region Forget  
+        #region Forget Password
         [HttpPost("ForgetPassword/{email}")]
         public async Task<IActionResult> ForgetPassword2( string email,IFormFileCollection attachments ) {
             if (string.IsNullOrEmpty(email)) {
 
                 return NotFound();
             }
-
             var user = await _userManager.FindByEmailAsync(email);
 
             if (user != null) {
@@ -196,21 +171,18 @@ namespace Carea.Controllers
                 var passwordResetLink = Url.Action("ResetPassword","Account",new { Email = email,Token = token },Request.Scheme);
                 var messages = new EmailService.Message(new string[] { email },"Reset Password url ",passwordResetLink,attachments,token);
                 await _emailSender.SendEmailAsync2(messages,email,$"<p>To reset your password <a href='{passwordResetLink}'>Click here</a></p>",passwordResetLink);
-
                 var Succesrespon = new UserManagerResponse {
 
                     IsSuccess = true,
                     Message = "Reset password URL has been sent to the email successfully!",
                     Token = token,
                 };
-
                 return Ok(Succesrespon);
             }
             var respon = new UserManagerResponse {
                 IsSuccess = false,
                 Message = "User Not Found!",
             };
-
             return BadRequest(respon); // 200
 
 

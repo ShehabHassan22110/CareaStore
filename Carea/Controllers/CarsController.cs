@@ -81,9 +81,6 @@ namespace Carea.Controllers
         public IActionResult Edit(int id)
         {
            
-
-
-
             var brands = _brand.Get();
             ViewBag.BrandList = new SelectList(brands, "Id", "BrandName");
             var data = _car.GetById(id);
@@ -98,7 +95,6 @@ namespace Carea.Controllers
             _car.Edit(data);
             return RedirectToAction("Index");
         }
-
         public IActionResult Details(int id)
         {
             var data = _car.GetById(id);

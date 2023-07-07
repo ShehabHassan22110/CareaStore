@@ -2527,3 +2527,4 @@ E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\scopedcss\projectbun
 E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\Carea.csproj.CopyComplete
 E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\Carea.genruntimeconfig.cache
 E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\ref\Carea.dll
+F:\Carea\Carea\bin\Release\net6.0\libman.json

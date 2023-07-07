@@ -58,9 +58,6 @@ namespace Carea.Services
                    Gender = model.Gender,
                    PIN = model.PIN,
                    device_id = model.device_id
-                   
-                   
-
                };
 
             var result = await _userManger.CreateAsync(user, model.Password);
@@ -79,33 +76,22 @@ namespace Carea.Services
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
                 new Claim("imgurl",$"{user.imgUrl}"),
-
-
             };
-
-
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
-
                 var token = new JwtSecurityToken(
                     issuer: _configuration["JWT:Issuer"],
                     audience: _configuration["JWT:Audience"],
-                     claims: claims,
+                    claims: claims,
                     expires: DateTime.Now.AddDays(30),
                     signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
-
-                string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
+                    string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
                 #endregion
-              
-                
                 return new UserManagerResponse
                 {
                     Message = "User created successfully!",
                     IsSuccess = true,
                     Token = tokenAsString
                 };
-
-
-
             }
 
             return new UserManagerResponse
@@ -121,7 +107,6 @@ namespace Carea.Services
         public async Task<UserManagerResponse> LoginUserAsync(LoginModel model)
         {
             var user = await _userManger.FindByEmailAsync(model.Email);
-
             if (user == null)
             {
                 return new UserManagerResponse
@@ -132,7 +117,6 @@ namespace Carea.Services
             }
 
             var result = await _userManger.CheckPasswordAsync(user, model.Password);
-
             if (!result)
                 return new UserManagerResponse
                 {
@@ -152,22 +136,15 @@ namespace Carea.Services
                 new Claim("pin",$"{user.PIN}"),
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
                 new Claim("imgurl",$"{user.imgUrl}"),
-
-
-
             };
-       
-
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
-
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:Issuer"],
                 audience: _configuration["JWT:Audience"],
-                 claims: claims,
+                claims: claims,
                 expires: DateTime.Now.AddDays(30),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
-
-            string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
+                string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
 
             return new UserManagerResponse
             {
@@ -189,16 +166,13 @@ namespace Carea.Services
 
             var decodedToken = WebEncoders.Base64UrlDecode(token);
             string normalToken = Encoding.UTF8.GetString(decodedToken);
-
             var result = await _userManger.ConfirmEmailAsync(user, normalToken);
-
             if (result.Succeeded)
                 return new UserManagerResponse
                 {
                     Message = "Email confirmed successfully!",
                     IsSuccess = true,
                 };
-
             return new UserManagerResponse
             {
                 IsSuccess = false,
@@ -242,19 +216,15 @@ namespace Carea.Services
                     IsSuccess = false,
                     Message = "No user associated with email",
                 };
-
             if (model.NewPassword != model.ConfirmPassword)
                 return new UserManagerResponse
                 {
                     IsSuccess = false,
                     Message = "Password doesn't match its confirmation",
                 };
-
             var decodedToken = WebEncoders.Base64UrlDecode(model.Token);
             string normalToken = Encoding.UTF8.GetString(decodedToken);
-
             var result = await _userManger.ResetPasswordAsync(user, normalToken, model.NewPassword);
-
             if (result.Succeeded)
                 return new UserManagerResponse
                 {
@@ -372,7 +342,6 @@ namespace Carea.Services
                  new Claim("imgurl",$"{user.imgUrl}"),
 
             };
-
                 var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
 
                 var token = new JwtSecurityToken(

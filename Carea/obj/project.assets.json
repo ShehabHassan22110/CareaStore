@@ -801,26 +801,6 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Microsoft.AspNetCore.Cors/2.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Http.Extensions": "2.1.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "2.1.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
-          "Microsoft.Extensions.Logging.Abstractions": "2.1.1",
-          "Microsoft.Extensions.Options": "2.1.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.13": {
         "type": "package",
         "compile": {
@@ -5526,19 +5506,6 @@
         "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
         "microsoft.aspnetcore.authentication.jwtbearer.6.0.13.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Cors/2.1.1": {
-      "sha512": "5b3xfO8ycP9fEm76HGdExptlxURKNbmGnlA2mN+FQMaWPEuFH1te6GReBcKCQp4oeSSWuLfV9xSo+8LpU24u1A==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.cors/2.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cors.xml",
-        "microsoft.aspnetcore.cors.2.1.1.nupkg.sha512",
-        "microsoft.aspnetcore.cors.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.13": {
@@ -12653,7 +12620,6 @@
       "MailKit >= 3.5.0",
       "Microsoft.AspNet.Identity.Core >= 2.2.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.13",
-      "Microsoft.AspNetCore.Cors >= 2.1.1",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.13",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.0",
@@ -12670,19 +12636,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\esooz\\.nuget\\packages\\": {}
+    "C:\\Users\\fg\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Carea Project\\Git hub Repo\\Repo\\Carea\\Carea.csproj",
+      "projectUniqueName": "F:\\Carea\\Carea\\Carea.csproj",
       "projectName": "Carea",
-      "projectPath": "E:\\Carea Project\\Git hub Repo\\Repo\\Carea\\Carea.csproj",
-      "packagesPath": "C:\\Users\\esooz\\.nuget\\packages\\",
-      "outputPath": "E:\\Carea Project\\Git hub Repo\\Repo\\Carea\\obj\\",
+      "projectPath": "F:\\Carea\\Carea\\Carea.csproj",
+      "packagesPath": "C:\\Users\\fg\\.nuget\\packages\\",
+      "outputPath": "F:\\Carea\\Carea\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\esooz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12690,14 +12661,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\Carea Project\\Git hub Repo\\Repo\\EmailServices\\EmailServices.csproj": {
-              "projectPath": "E:\\Carea Project\\Git hub Repo\\Repo\\EmailServices\\EmailServices.csproj"
+            "F:\\Carea\\EmailServices\\EmailServices.csproj": {
+              "projectPath": "F:\\Carea\\EmailServices\\EmailServices.csproj"
             }
           }
         }
@@ -12735,10 +12707,6 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[6.0.13, )"
-          },
-          "Microsoft.AspNetCore.Cors": {
-            "target": "Package",
-            "version": "[2.1.1, )"
           },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
@@ -12814,7 +12782,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.410\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   },

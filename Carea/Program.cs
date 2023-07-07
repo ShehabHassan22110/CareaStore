@@ -70,16 +70,7 @@ builder.Services.AddScoped<IOrderRequestRep, OrderRequestRep>();
 builder.Services.AddScoped<IShippingRep, ShippingRep>();
 builder.Services.AddScoped<ICreateOrderRep,CreateOrderRep>();
 builder.Services.AddScoped(typeof(IDynamicRep<>), typeof(DynamicRep<>));
-//------------Api Cors ------------
-builder.Services.AddCors();
-builder.Services.AddCors(options => {
-	options.AddPolicy(name: "AllowOrigin",
-		builder => {
-			builder.WithOrigins("https://localhost:44363/","https://car-price-prediction-e99b.onrender.com/predict")
-								.AllowAnyHeader()
-								.AllowAnyMethod();
-		});
-});
+
 
 //---------------------------------------------
 //Api Interfaces
@@ -126,6 +117,14 @@ IdentityBuilder identityBuilder = builder.Services.AddIdentity<ApplicationUser,I
 builder.Services.AddEndpointsApiExplorer();
 
 
+//builder.Services.AddCors(
+//    c => c.AddPolicy("CORS",
+//    p => p.AllowAnyOrigin().
+//        AllowAnyMethod().
+//        AllowAnyHeader()
+//        ));
+builder.Services.AddCors();
+
 
 
 var app = builder.Build();
@@ -137,7 +136,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-
+ 
 }
 app.UseSwagger();
 app.UseSwaggerUI(c =>
@@ -145,13 +144,6 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 });
 
-app.UseCors(builder => {
-	builder
-	.AllowAnyOrigin()
-	.AllowAnyMethod()
-	.AllowAnyHeader();
-});
-app.UseCors("AllowOrigin");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -159,6 +151,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors(c=>c.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(a=>true).AllowCredentials());
 app.UseAuthentication();
 app.UseAuthorization();
 
