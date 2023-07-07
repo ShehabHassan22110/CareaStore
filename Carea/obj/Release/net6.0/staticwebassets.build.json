@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1XJzkoc5JZX7r3toaanD4sGqh840FMfrerqApMeEx9Y=",
+  "Hash": "JQo4agMzFtAmp2lo53k6ceg34O5Q+TqSAlz5wL3DvcQ=",
   "Source": "Carea",
   "BasePath": "_content/Carea",
   "Mode": "Default",
@@ -24495,6 +24495,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\app-assets\\vendors\\js\\miscellaneous\\countdown.min.js"
+    },
+    {
+      "Identity": "F:\\Carea\\Carea\\wwwroot\\app-assets\\vendors\\js\\package.json",
+      "SourceId": "Carea",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Carea\\Carea\\wwwroot\\",
+      "BasePath": "_content/Carea",
+      "RelativePath": "app-assets/vendors/js/package.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app-assets\\vendors\\js\\package.json"
+    },
+    {
+      "Identity": "F:\\Carea\\Carea\\wwwroot\\app-assets\\vendors\\js\\package-lock.json",
+      "SourceId": "Carea",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Carea\\Carea\\wwwroot\\",
+      "BasePath": "_content/Carea",
+      "RelativePath": "app-assets/vendors/js/package-lock.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app-assets\\vendors\\js\\package-lock.json"
     },
     {
       "Identity": "F:\\Carea\\Carea\\wwwroot\\app-assets\\vendors\\js\\pagination\\jquery.bootpag.min.js",
