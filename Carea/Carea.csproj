@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\Dashboard\**" />
+    <Content Remove="wwwroot\Dashboard\**" />
+    <EmbeddedResource Remove="wwwroot\Dashboard\**" />
+    <None Remove="wwwroot\Dashboard\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Views\Users\Delete.cshtml" />
     <None Include="Views\Users\Details.cshtml" />
     <None Include="Views\Users\Edit.cshtml" />
@@ -16,6 +23,7 @@
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="BundleTransformer.MicrosoftAjax" Version="1.10.0" />
     <PackageReference Include="CorePush" Version="3.1.1" />
     <PackageReference Include="MailKit" Version="3.5.0" />
     <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
@@ -40,7 +48,6 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="wwwroot\Dashboard\" />
   </ItemGroup>
 
   <ItemGroup>

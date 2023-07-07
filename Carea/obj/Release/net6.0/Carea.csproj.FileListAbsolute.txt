@@ -2528,3 +2528,13 @@ E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\Carea.csproj.CopyCom
 E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\Carea.genruntimeconfig.cache
 E:\Carea Project\Git hub Repo\Repo\Carea\obj\Release\net6.0\ref\Carea.dll
 F:\Carea\Carea\bin\Release\net6.0\libman.json
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\libman.json
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\AdvancedStringBuilder.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\AjaxMin.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\Antlr3.Runtime.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\BundleTransformer.Core.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\BundleTransformer.MicrosoftAjax.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\System.Web.Optimization.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\Microsoft.Web.Infrastructure.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\WebGrease.dll
+E:\Carea Project\Git hub Repo\Repo\Carea\bin\Release\net6.0\ru-ru\BundleTransformer.Core.resources.dll
