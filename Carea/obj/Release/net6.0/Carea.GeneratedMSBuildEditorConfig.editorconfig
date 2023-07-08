@@ -92,12 +92,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/Carea/Carea/Views/Cars/predicPrie.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xwcmVkaWNQcmllLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/Carea/Carea/Views/Cars/prediction.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xwcmVkaWN0aW9uLmNzaHRtbA==
+[F:/Carea/Carea/Views/Cars/Prediction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xQcmVkaWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/Carea/Carea/Views/Complaints_Suggestions/Delete.cshtml]

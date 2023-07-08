@@ -102,11 +102,8 @@ namespace Carea.Controllers
             return View(result);
         }
 
-        public IActionResult prediction() {
 
-            return View();
-        }
-         public IActionResult predicPrie() {
+         public IActionResult Prediction() {
 
             return View();
         }
