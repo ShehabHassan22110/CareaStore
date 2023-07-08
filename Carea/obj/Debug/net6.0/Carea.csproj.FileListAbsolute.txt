@@ -3337,3 +3337,13 @@ F:\Carea\Carea\bin\Debug\net6.0\zh-CN\Humanizer.resources.dll
 F:\Carea\Carea\bin\Debug\net6.0\zh-Hans\Humanizer.resources.dll
 F:\Carea\Carea\bin\Debug\net6.0\zh-Hant\Humanizer.resources.dll
 F:\Carea\Carea\obj\Debug\net6.0\Carea.MvcApplicationPartsAssemblyInfo.cs
+F:\Carea\Carea\bin\Debug\net6.0\libman.json
+F:\Carea\Carea\bin\Debug\net6.0\AdvancedStringBuilder.dll
+F:\Carea\Carea\bin\Debug\net6.0\AjaxMin.dll
+F:\Carea\Carea\bin\Debug\net6.0\Antlr3.Runtime.dll
+F:\Carea\Carea\bin\Debug\net6.0\BundleTransformer.Core.dll
+F:\Carea\Carea\bin\Debug\net6.0\BundleTransformer.MicrosoftAjax.dll
+F:\Carea\Carea\bin\Debug\net6.0\System.Web.Optimization.dll
+F:\Carea\Carea\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+F:\Carea\Carea\bin\Debug\net6.0\WebGrease.dll
+F:\Carea\Carea\bin\Debug\net6.0\ru-RU\BundleTransformer.Core.resources.dll

@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
+          "BundleTransformer.MicrosoftAjax": "1.10.0",
           "CorePush": "3.1.1",
           "EmailServices": "1.0.0",
           "MailKit": "3.5.0",
@@ -33,6 +34,30 @@
           "Carea.dll": {}
         }
       },
+      "AdvancedStringBuilder/0.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/AdvancedStringBuilder.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "AjaxMin/5.14.5506.26202": {
+        "runtime": {
+          "lib/net40/AjaxMin.dll": {
+            "assemblyVersion": "5.14.5506.26196",
+            "fileVersion": "5.14.5506.26196"
+          }
+        }
+      },
+      "Antlr/3.4.1.9004": {
+        "runtime": {
+          "lib/Antlr3.Runtime.dll": {
+            "assemblyVersion": "3.4.1.9004",
+            "fileVersion": "3.4.1.9004"
+          }
+        }
+      },
       "AutoMapper/12.0.1": {
         "dependencies": {
           "Microsoft.CSharp": "4.7.0"
@@ -53,6 +78,36 @@
           "lib/netstandard2.1/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.0.0"
+          }
+        }
+      },
+      "BundleTransformer.Core/1.10.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0",
+          "Microsoft.AspNet.Web.Optimization": "1.1.3"
+        },
+        "runtime": {
+          "lib/net40/BundleTransformer.Core.dll": {
+            "assemblyVersion": "1.10.0.0",
+            "fileVersion": "1.10.0.0"
+          }
+        },
+        "resources": {
+          "lib/net40/ru-ru/BundleTransformer.Core.resources.dll": {
+            "locale": "ru-RU"
+          }
+        }
+      },
+      "BundleTransformer.MicrosoftAjax/1.10.0": {
+        "dependencies": {
+          "AdvancedStringBuilder": "0.1.0",
+          "AjaxMin": "5.14.5506.26202",
+          "BundleTransformer.Core": "1.10.0"
+        },
+        "runtime": {
+          "lib/net40/BundleTransformer.MicrosoftAjax.dll": {
+            "assemblyVersion": "1.10.0.0",
+            "fileVersion": "1.10.0.0"
           }
         }
       },
@@ -651,6 +706,18 @@
           "lib/net45/Microsoft.AspNet.Identity.Core.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.2.3.11125"
+          }
+        }
+      },
+      "Microsoft.AspNet.Web.Optimization/1.1.3": {
+        "dependencies": {
+          "Microsoft.Web.Infrastructure": "1.0.0",
+          "WebGrease": "1.5.2"
+        },
+        "runtime": {
+          "lib/net40/System.Web.Optimization.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.40211.0"
           }
         }
       },
@@ -1735,6 +1802,14 @@
           "lib/net6.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {
             "assemblyVersion": "6.0.14.0",
             "fileVersion": "6.0.1423.31102"
+          }
+        }
+      },
+      "Microsoft.Web.Infrastructure/1.0.0": {
+        "runtime": {
+          "lib/net40/Microsoft.Web.Infrastructure.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20105.407"
           }
         }
       },
@@ -2873,6 +2948,18 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "WebGrease/1.5.2": {
+        "dependencies": {
+          "Antlr": "3.4.1.9004",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/WebGrease.dll": {
+            "assemblyVersion": "1.5.2.14234",
+            "fileVersion": "1.5.2.14234"
+          }
+        }
+      },
       "EmailServices/1.0.0": {
         "dependencies": {
           "MailKit": "3.5.0",
@@ -2893,6 +2980,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AdvancedStringBuilder/0.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IbN3r5whlJvi8MhCDPVpIb+NVScyUcKSdcJZrnoXFDyzPDISl3AbWouNBYIHRdZdfGuzqCQEhM1vkxbIKqQVaQ==",
+      "path": "advancedstringbuilder/0.1.0",
+      "hashPath": "advancedstringbuilder.0.1.0.nupkg.sha512"
+    },
+    "AjaxMin/5.14.5506.26202": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ayrhrlFSQEAw+1w7cdUGozbZ8BxakITQcTezeLKByp69zk0tdto8/Jt3U2ieCq3U1dlvwXGvlthMaTJXeHEaFw==",
+      "path": "ajaxmin/5.14.5506.26202",
+      "hashPath": "ajaxmin.5.14.5506.26202.nupkg.sha512"
+    },
+    "Antlr/3.4.1.9004": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c1S+HBE+KYA5EBxtn25LEK02hHPH/tDQ6RviUTTCJpZIPoputtn8ArsQJy9lVJWZOnw37ufByO2Fmf1M8wpr8Q==",
+      "path": "antlr/3.4.1.9004",
+      "hashPath": "antlr.3.4.1.9004.nupkg.sha512"
+    },
     "AutoMapper/12.0.1": {
       "type": "package",
       "serviceable": true,
@@ -2906,6 +3014,20 @@
       "sha512": "sha512-XCJ4E3oKrbRl1qY9Mr+7uyC0xZj1+bqQjmQRWTiTKiVuuXTny+7YFWHi20tPjwkMukLbicN6yGlDy5PZ4wyi1w==",
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.0",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512"
+    },
+    "BundleTransformer.Core/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6tIM8PQkkdisIRdoD8lroRqQ+84D2MLBuGq588PUK11Uy3lmrkN94u8YkmF2fqRGKTBIdDrRUz1xmREY9+VhDA==",
+      "path": "bundletransformer.core/1.10.0",
+      "hashPath": "bundletransformer.core.1.10.0.nupkg.sha512"
+    },
+    "BundleTransformer.MicrosoftAjax/1.10.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h/P90pCchBxKYdbP/uBDRdnGymLs4nb3Knu9h32ZSnpA2QWbK+m3ZtyasNzJVgwYSYfObdqpqBYG/tHDPMi1DQ==",
+      "path": "bundletransformer.microsoftajax/1.10.0",
+      "hashPath": "bundletransformer.microsoftajax.1.10.0.nupkg.sha512"
     },
     "CorePush/3.1.1": {
       "type": "package",
@@ -3305,6 +3427,13 @@
       "sha512": "sha512-Mv5FpoaxspE8hlWLE4r1IdZtovg/OyFgVRhxQbx47J4sqdLImN1hnM1lnwCj+/wLmqtqFk/RYMoZ5GAcwm/00g==",
       "path": "microsoft.aspnet.identity.core/2.2.3",
       "hashPath": "microsoft.aspnet.identity.core.2.2.3.nupkg.sha512"
+    },
+    "Microsoft.AspNet.Web.Optimization/1.1.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TWKKpTWEdB8jXp2Vl2TXNKW30GBQg6nnh0y8iZWmGY5c1XY4f649vfDslNHsCsvk9JZxc1Rkm/UGDdfq4gjWRQ==",
+      "path": "microsoft.aspnet.web.optimization/1.1.3",
+      "hashPath": "microsoft.aspnet.web.optimization.1.1.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
@@ -3879,6 +4008,13 @@
       "sha512": "sha512-iWlCz0sAr8pSsxY/X1Xb9KPexi0zijmPIfOmFRTIBnrarMqv8tao1JQj9sYz6c2v4un2zBlky0UkR3jO/IrXHg==",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/6.0.14",
       "hashPath": "microsoft.visualstudio.web.codegenerators.mvc.6.0.14.nupkg.sha512"
+    },
+    "Microsoft.Web.Infrastructure/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
+      "path": "microsoft.web.infrastructure/1.0.0",
+      "hashPath": "microsoft.web.infrastructure.1.0.0.nupkg.sha512"
     },
     "Microsoft.Win32.Primitives/4.3.0": {
       "type": "package",
@@ -4733,6 +4869,13 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "WebGrease/1.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VoyDSOOugLx3q5IyOgEcjeYZQOqV9VWZQT57UtN4szlYhAmOcEjVfKWXbtRqBuX43pgyL9E7nMSIPoryC8Cu1Q==",
+      "path": "webgrease/1.5.2",
+      "hashPath": "webgrease.1.5.2.nupkg.sha512"
     },
     "EmailServices/1.0.0": {
       "type": "project",
