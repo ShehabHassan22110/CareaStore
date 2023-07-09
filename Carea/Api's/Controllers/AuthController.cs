@@ -1,10 +1,12 @@
 ﻿using Carea.Api.Models;
 using Carea.API.Models;
+using Carea.BLL.Interface;
 using Carea.Extend;
 using Carea.Helper;
 using Carea.Interfaces;
 using Carea.Models;
 using Carea.Services.Interfaces;
+using Carea.ViewModels;
 using EmailService;
 using Helper;
 using Microsoft.AspNetCore.Http;
@@ -21,11 +23,13 @@ namespace Carea.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IUserService _userService;
+        private readonly IUserLoginsRep _userlogins;
         private readonly IEmailSender _emailSender;
         private IConfiguration _configuration;
         private readonly IMailService _mailService;
         private readonly UserManager<ApplicationUser> _userManager;
-        public AuthController(IUserService userService, IEmailSender emailSender, IConfiguration configuration,IMailService mailService ,UserManager<ApplicationUser> userManager )
+        public AuthController(IUserService userService, IEmailSender emailSender, IConfiguration configuration,IMailService mailService 
+            ,UserManager<ApplicationUser> userManager, IUserLoginsRep userlogins)
         {
 
             _userService = userService;
@@ -33,6 +37,7 @@ namespace Carea.Controllers
             _configuration = configuration;
             _mailService = mailService;
             _userManager = userManager;
+            _userlogins = userlogins;
         }
         #region Register
         [HttpPost("Register")]
@@ -54,9 +59,14 @@ namespace Carea.Controllers
         public async Task<IActionResult> LoginAsync( [FromBody] LoginModel model ) {
             if (ModelState.IsValid) {
                 var result = await _userService.LoginUserAsync(model);
-
+               
+               
                 if (result.IsSuccess) {
                     await _mailService.SendEmailAsync(model.Email,"New login","<h1>Hey!, new login to your account noticed</h1><p>New login to your account at " + DateTime.Now + "</p>");
+                  
+
+
+
                     return Ok(result);
 
                 }

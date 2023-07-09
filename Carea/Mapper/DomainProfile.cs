@@ -36,6 +36,9 @@ namespace Mapper
             CreateMap<Terms_Conditions,Terms_ConditionsVM>();
             CreateMap<Terms_ConditionsVM,Terms_Conditions>();
 
+            CreateMap<UserLogins, UserLoginsVM>();
+            CreateMap<UserLoginsVM, UserLogins>();
+
 
 
         }

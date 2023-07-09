@@ -69,6 +69,7 @@ builder.Services.AddScoped<ICarRateRep, CarRateRep>();
 builder.Services.AddScoped<IOrderRequestRep, OrderRequestRep>();
 builder.Services.AddScoped<IShippingRep, ShippingRep>();
 builder.Services.AddScoped<ICreateOrderRep,CreateOrderRep>();
+builder.Services.AddScoped<IUserLoginsRep, UserLoginsRep>();
 builder.Services.AddScoped(typeof(IDynamicRep<>), typeof(DynamicRep<>));
 
 

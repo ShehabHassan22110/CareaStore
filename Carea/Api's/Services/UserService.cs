@@ -1,10 +1,12 @@
 ﻿using Carea.Api.Models;
 using Carea.API.Models;
+using Carea.BLL.Interface;
 using Carea.Extend;
 using Carea.Helper;
 using Carea.Interfaces;
 using Carea.Models;
 using Carea.Services.Interfaces;
+using Carea.ViewModels;
 using EmailService;
 using Helper;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -30,14 +32,16 @@ namespace Carea.Services
         private IConfiguration _configuration;
         IEmailSender _emailSender;
         private readonly IMailService _mailService;
+        private readonly IUserLoginsRep _userlogins;
 
-        public UserService(UserManager<ApplicationUser> userManager, IConfiguration configuration, IEmailSender emailSender , IMailService mailService)
+        public UserService(UserManager<ApplicationUser> userManager, IConfiguration configuration, IEmailSender emailSender , IMailService mailService, IUserLoginsRep userlogins)
         {
             _userManger = userManager;
             _configuration = configuration;
           
             _emailSender=emailSender;
             _mailService = mailService;
+            _userlogins=userlogins;
         }
 
 
@@ -137,7 +141,7 @@ namespace Carea.Services
                 new Claim("BirthDate",$"{user.BirthDate.ToShortDateString()}"),
                 new Claim("imgurl",$"{user.imgUrl}"),
             };
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));
             var token = new JwtSecurityToken(
                 issuer: _configuration["JWT:Issuer"],
                 audience: _configuration["JWT:Audience"],
@@ -145,6 +149,20 @@ namespace Carea.Services
                 expires: DateTime.Now.AddDays(30),
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256));
                 string tokenAsString = new JwtSecurityTokenHandler().WriteToken(token);
+
+            // Store Last Login for user 
+            if (user != null)
+            {
+                UserLogins LastLogin = new UserLogins
+                {
+                    UserId = user.Id,
+                    DeviceId = model.device_id,
+
+                };
+                _userlogins.Creat(LastLogin);
+
+            };
+
 
             return new UserManagerResponse
             {

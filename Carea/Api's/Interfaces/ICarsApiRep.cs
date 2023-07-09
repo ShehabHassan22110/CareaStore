@@ -19,15 +19,6 @@ namespace Carea.Api_s.Interfaces
         {
             this.db = db;
         }
-        public double getrateavgbycarId(int id) 
-        {
-            var total = db.Car_Rate.Where(a => a.CarId == id).Select(a => a.Rate).Sum();
-            var number = db.Car_Rate.Where(a => a.CarId == id).Select(a => a.Rate).Count();
-            var avg = total / number;
-
-            return avg;
-
-        }
         static int getrate(int id) 
         {
 
@@ -218,6 +209,16 @@ namespace Carea.Api_s.Interfaces
             return data;
 
         }
+        public double getrateavgbycarId(int id)
+        {
+            var total = db.Car_Rate.Where(a => a.CarId == id).Select(a => a.Rate).Sum();
+            var number = db.Car_Rate.Where(a => a.CarId == id).Select(a => a.Rate).Count();
+            var avg = total / number;
+
+            return avg;
+
+        }
+
 
     }
 }

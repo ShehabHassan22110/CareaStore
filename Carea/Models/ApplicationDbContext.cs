@@ -20,5 +20,6 @@ namespace Carea.Models
 		public virtual DbSet<Complaints_Suggestions> Complaints_Suggestions { set; get; }
 		public virtual DbSet<Terms_Conditions> Terms_Conditions { set; get; }
 		public virtual DbSet<PrivacyPolicy> PrivacyPolicy { set; get; }
+		public virtual DbSet<UserLogins> UserLogins { set; get; }
 	}
 }

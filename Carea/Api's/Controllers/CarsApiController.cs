@@ -215,7 +215,7 @@ namespace Carea.Api_s.Controllers
 
             }
         }
-
+        #region Get Car By ID 
         [HttpPost]
         [Route("/api/Get_CarsbyId/{id}")]
         public IActionResult GetbyId(int id)
@@ -251,6 +251,7 @@ namespace Carea.Api_s.Controllers
             }
 
         }
+        #endregion
 
         [HttpGet]
         [Route("/api/Get_TopCars")]
