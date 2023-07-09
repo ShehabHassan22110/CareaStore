@@ -5,320 +5,321 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Carea
 build_property.RootNamespace = Carea
-build_property.ProjectDir = E:\Carea Project\Git hub Repo\Repo\Carea\
+build_property.ProjectDir = F:\Carea\Carea\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\Carea Project\Git hub Repo\Repo\Carea
+build_property.MSBuildProjectDirectory = F:\Carea\Carea
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Pages/ResetPassword.cshtml]
+[F:/Carea/Carea/Pages/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/ConfirmforgetPassword.cshtml]
+[F:/Carea/Carea/Views/Account/ConfirmforgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtZm9yZ2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/ConfirmresetPassword.cshtml]
+[F:/Carea/Carea/Views/Account/ConfirmresetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtcmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/ForgetPassword.cshtml]
+[F:/Carea/Carea/Views/Account/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/LogIn.cshtml]
+[F:/Carea/Carea/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/Registration.cshtml]
+[F:/Carea/Carea/Views/Account/Registration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Account/ResetPassword.cshtml]
+[F:/Carea/Carea/Views/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Admin/CreateRole.cshtml]
+[F:/Carea/Carea/Views/Admin/CreateRole.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUm9sZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Admin/ShowRoles.cshtml]
+[F:/Carea/Carea/Views/Admin/ShowRoles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2hvd1JvbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Brand/Create.cshtml]
+[F:/Carea/Carea/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Brand/Delete.cshtml]
+[F:/Carea/Carea/Views/Brand/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Brand/Details.cshtml]
+[F:/Carea/Carea/Views/Brand/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Brand/Edit.cshtml]
+[F:/Carea/Carea/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Brand/Index.cshtml]
+[F:/Carea/Carea/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/Create.cshtml]
+[F:/Carea/Carea/Views/Cars/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/Delete.cshtml]
+[F:/Carea/Carea/Views/Cars/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/Details.cshtml]
+[F:/Carea/Carea/Views/Cars/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/Edit.cshtml]
+[F:/Carea/Carea/Views/Cars/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/Index.cshtml]
+[F:/Carea/Carea/Views/Cars/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Cars/prediction.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xwcmVkaWN0aW9uLmNzaHRtbA==
+[F:/Carea/Carea/Views/Cars/Prediction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2Fyc1xQcmVkaWN0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Complaints_Suggestions/Delete.cshtml]
+[F:/Carea/Carea/Views/Complaints_Suggestions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50c19TdWdnZXN0aW9uc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Complaints_Suggestions/Details.cshtml]
+[F:/Carea/Carea/Views/Complaints_Suggestions/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50c19TdWdnZXN0aW9uc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Complaints_Suggestions/Index.cshtml]
+[F:/Carea/Carea/Views/Complaints_Suggestions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGxhaW50c19TdWdnZXN0aW9uc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/Create.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/Delete.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/Details.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/Edit.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/Index.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/CreateOrder/receive.cshtml]
+[F:/Carea/Carea/Views/CreateOrder/receive.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3JlYXRlT3JkZXJccmVjZWl2ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/CardIndex.cshtml]
+[F:/Carea/Carea/Views/Dashboard/CardIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENhcmRJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/Create.cshtml]
+[F:/Carea/Carea/Views/Dashboard/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/Delete.cshtml]
+[F:/Carea/Carea/Views/Dashboard/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/DeleteCard.cshtml]
+[F:/Carea/Carea/Views/Dashboard/DeleteCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERlbGV0ZUNhcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/Edite.cshtml]
+[F:/Carea/Carea/Views/Dashboard/Edite.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEVkaXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/Index.cshtml]
+[F:/Carea/Carea/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Dashboard/Layout.cshtml]
+[F:/Carea/Carea/Views/Dashboard/Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXExheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Home/Index.cshtml]
+[F:/Carea/Carea/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Home/Privacy.cshtml]
+[F:/Carea/Carea/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Notafication/Push.cshtml]
+[F:/Carea/Carea/Views/Notafication/Push.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YWZpY2F0aW9uXFB1c2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Offers/Create.cshtml]
+[F:/Carea/Carea/Views/Offers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Offers/Delete.cshtml]
+[F:/Carea/Carea/Views/Offers/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Offers/Details.cshtml]
+[F:/Carea/Carea/Views/Offers/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Offers/Edit.cshtml]
+[F:/Carea/Carea/Views/Offers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Offers/Index.cshtml]
+[F:/Carea/Carea/Views/Offers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZmZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/OrderRequest/Delete.cshtml]
+[F:/Carea/Carea/Views/OrderRequest/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJSZXF1ZXN0XERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/OrderRequest/Details.cshtml]
+[F:/Carea/Carea/Views/OrderRequest/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJSZXF1ZXN0XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/OrderRequest/Edit.cshtml]
+[F:/Carea/Carea/Views/OrderRequest/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJSZXF1ZXN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/OrderRequest/Index.cshtml]
+[F:/Carea/Carea/Views/OrderRequest/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJSZXF1ZXN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/OrderRequest/Reject.cshtml]
+[F:/Carea/Carea/Views/OrderRequest/Reject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJSZXF1ZXN0XFJlamVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PhotoColor/Create.cshtml]
+[F:/Carea/Carea/Views/PhotoColor/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9Db2xvclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PhotoColor/Delete.cshtml]
+[F:/Carea/Carea/Views/PhotoColor/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9Db2xvclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PhotoColor/Details.cshtml]
+[F:/Carea/Carea/Views/PhotoColor/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9Db2xvclxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PhotoColor/Edit.cshtml]
+[F:/Carea/Carea/Views/PhotoColor/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9Db2xvclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PhotoColor/Index.cshtml]
+[F:/Carea/Carea/Views/PhotoColor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvdG9Db2xvclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PrivacyPolicy/Create.cshtml]
+[F:/Carea/Carea/Views/PrivacyPolicy/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVBvbGljeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PrivacyPolicy/Delete.cshtml]
+[F:/Carea/Carea/Views/PrivacyPolicy/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVBvbGljeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PrivacyPolicy/Edit.cshtml]
+[F:/Carea/Carea/Views/PrivacyPolicy/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVBvbGljeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/PrivacyPolicy/Index.cshtml]
+[F:/Carea/Carea/Views/PrivacyPolicy/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeVBvbGljeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/SavedOrders/Delete.cshtml]
+[F:/Carea/Carea/Views/SavedOrders/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2ZWRPcmRlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/SavedOrders/Details.cshtml]
+[F:/Carea/Carea/Views/SavedOrders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2ZWRPcmRlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/SavedOrders/Edit.cshtml]
+[F:/Carea/Carea/Views/SavedOrders/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2ZWRPcmRlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/SavedOrders/Index.cshtml]
+[F:/Carea/Carea/Views/SavedOrders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2F2ZWRPcmRlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Shared/Error.cshtml]
+[F:/Carea/Carea/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Shared/_ValidationScriptsPartial.cshtml]
+[F:/Carea/Carea/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/TermsConditions/Create.cshtml]
+[F:/Carea/Carea/Views/TermsConditions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybXNDb25kaXRpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/TermsConditions/Delete.cshtml]
+[F:/Carea/Carea/Views/TermsConditions/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybXNDb25kaXRpb25zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/TermsConditions/Edit.cshtml]
+[F:/Carea/Carea/Views/TermsConditions/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybXNDb25kaXRpb25zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/TermsConditions/Index.cshtml]
+[F:/Carea/Carea/Views/TermsConditions/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVybXNDb25kaXRpb25zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/Delete.cshtml]
+[F:/Carea/Carea/Views/Users/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/Details.cshtml]
+[F:/Carea/Carea/Views/Users/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/Edit.cshtml]
+[F:/Carea/Carea/Views/Users/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/Index.cshtml]
+[F:/Carea/Carea/Views/Users/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/IndexOfAdmins.cshtml]
+[F:/Carea/Carea/Views/Users/IndexOfAdmins.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXhPZkFkbWlucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Users/IndexOfUsers.cshtml]
+[F:/Carea/Carea/Views/Users/IndexOfUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXhPZlVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/_ViewImports.cshtml]
+[F:/Carea/Carea/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/_ViewStart.cshtml]
+[F:/Carea/Carea/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Carea Project/Git hub Repo/Repo/Carea/Views/Shared/_Layout.cshtml]
+[F:/Carea/Carea/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-b4ys0u703t
