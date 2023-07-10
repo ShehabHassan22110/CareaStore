@@ -41,11 +41,10 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 
 
 builder.Services.AddSingleton(builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>());
-//builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddRazorPages();
 
+builder.Services.AddCors();
 
-//builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddTransient<IEmailSender, EmailSender>();
@@ -118,13 +117,13 @@ IdentityBuilder identityBuilder = builder.Services.AddIdentity<ApplicationUser,I
 builder.Services.AddEndpointsApiExplorer();
 
 
-//builder.Services.AddCors(
-//    c => c.AddPolicy("CORS",
-//    p => p.AllowAnyOrigin().
-//        AllowAnyMethod().
-//        AllowAnyHeader()
-//        ));
-builder.Services.AddCors();
+builder.Services.AddCors(
+    c => c.AddPolicy("CORS",
+    p => p.AllowAnyOrigin().
+        AllowAnyMethod().
+        AllowAnyHeader()
+        ));
+
 
 
 
@@ -152,7 +151,7 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseCors(c=>c.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(a=>true).AllowCredentials());
+app.UseCors(c => c.AllowAnyHeader().AllowAnyMethod().SetIsOriginAllowed(a => true).AllowCredentials());
 app.UseAuthentication();
 app.UseAuthorization();
 
